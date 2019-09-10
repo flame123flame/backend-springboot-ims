@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<fontFamilies>
+
+	<fontFamily name="TH Sarabun New">
+		<normal>reports/fonts/THSarabunNew.ttf</normal>
+		<bold>reports/fonts/THSarabunNew-Bold.ttf</bold>
+		<italic>reports/fonts/THSarabunNew-Italic.ttf</italic>
+		<boldItalic>reports/fonts/THSarabunNew-BoldItalic.ttf</boldItalic>
+		<pdfEncoding>Identity-H</pdfEncoding>
+		<pdfEmbedded>true</pdfEmbedded>
+	</fontFamily>
+
+	<fontFamily name="DejaVu Sans">
+		<normal>reports/fonts/DejaVuSans.ttf</normal>
+		<pdfEncoding>Identity-H</pdfEncoding>
+		<pdfEmbedded>true</pdfEmbedded>
+	</fontFamily>
+
+</fontFamilies>

@@ -1,0 +1,436 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.5.1.final using JasperReports Library version 6.5.1  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="IA_FORM_6006_NO" pageWidth="595" pageHeight="842" whenNoDataType="AllSectionsNoDetail" columnWidth="460" leftMargin="80" rightMargin="55" topMargin="55" bottomMargin="25" uuid="31fa36c1-11f3-488f-bd27-17afb51e274a">
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<style name="Topic" hTextAlign="Center" vTextAlign="Middle" fontName="TH Sarabun New" fontSize="16" isBold="true"/>
+	<style name="TextDetail" hTextAlign="Left" pattern="" fontName="TH Sarabun New" fontSize="14"/>
+	<style name="TextDetailBold" pattern="" fontName="TH Sarabun New" fontSize="14" isBold="true"/>
+	<style name="Checkbox" fontName="DejaVu Sans"/>
+	<style name="Topic2" fontName="TH Sarabun New" fontSize="16"/>
+	<style name="TextDetailCenter" hTextAlign="Center" vTextAlign="Top" isBlankWhenNull="true" fontName="TH Sarabun New" fontSize="14"/>
+	<parameter name="name" class="java.lang.String"/>
+	<parameter name="position" class="java.lang.String"/>
+	<parameter name="paymentCost" class="java.lang.String"/>
+	<parameter name="affiliation" class="java.lang.String"/>
+	<parameter name="paymentFor" class="java.lang.String"/>
+	<parameter name="period" class="java.lang.String"/>
+	<parameter name="refReceipts" class="java.math.BigDecimal"/>
+	<parameter name="billAmount" class="java.lang.String"/>
+	<parameter name="salary" class="java.lang.String"/>
+	<parameter name="requestNo" class="java.lang.String"/>
+	<parameter name="notOver" class="java.lang.String"/>
+	<parameter name="periodWithdraw" class="java.lang.String"/>
+	<parameter name="totalMonth" class="java.math.BigDecimal"/>
+	<parameter name="totalWithdraw" class="java.math.BigDecimal"/>
+	<parameter name="receipts" class="java.lang.String"/>
+	<parameter name="status" class="java.lang.String"/>
+	<parameter name="periodWithdrawTo" class="java.lang.String"/>
+	<parameter name="iaDisReqId" class="java.lang.String"/>
+	<parameter name="form6005No" class="java.lang.String"/>
+	<parameter name="billAmountText" class="java.lang.String"/>
+	<parameter name="salaryText" class="java.lang.String"/>
+	<parameter name="notOverText" class="java.lang.String"/>
+	<parameter name="totalMonthThaiNumber" class="java.lang.String"/>
+	<parameter name="totalWithdrawText" class="java.lang.String"/>
+	<parameter name="receiptsNumber" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="63" splitType="Stretch">
+			<textField>
+				<reportElement style="Topic" x="158" y="-13" width="190" height="30" uuid="dd744a44-d600-4fe5-bc36-df9f394bdd75"/>
+				<textFieldExpression><![CDATA["แบบขอเบิกเงินค่าเช่าบ้าน (แบบ ๖๐๐๖)"]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="699" splitType="Prevent">
+			<textField>
+				<reportElement style="Topic2" x="20" y="-51" width="143" height="30" uuid="d7effebc-8dcf-4a25-a4d5-d36731d79586"/>
+				<textFieldExpression><![CDATA["๑. การขอเบิกและการรับรอง"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="TextDetail" x="-1" y="-20" width="42" height="20" uuid="6eaa90f8-6230-4657-982c-60448d64a4e7"/>
+				<textFieldExpression><![CDATA["ข้าพเจ้า"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="TextDetail" x="247" y="-20" width="40" height="20" uuid="cea65117-d44b-40a2-810e-438a4ada3078"/>
+				<textFieldExpression><![CDATA["ตำแหน่ง"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="TextDetail" x="0" y="6" width="40" height="20" uuid="452fc4c4-80d0-412b-9f14-54609681cf0b"/>
+				<textFieldExpression><![CDATA["สังกัด"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="TextDetail" x="20" y="30" width="180" height="20" uuid="683151cd-6dff-4d16-9655-7a98b1a5035f"/>
+				<textFieldExpression><![CDATA["๑. ขอยื่นเบิกเป็นค่าเช่าบ้าน ดังนี้"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="TextDetail" x="40" y="50" width="100" height="20" uuid="63002d63-b110-4eec-9916-b1a8dab669f1"/>
+				<textFieldExpression><![CDATA["๑.๑ ข้าพเจ้าได้จ่ายเงิน	"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement key="" style="Checkbox" x="145" y="53" width="30" height="30" uuid="5aca2cfe-4d8a-4f55-9231-0b75c752c1eb"/>
+				<textFieldExpression><![CDATA["1".equals($P{paymentCost})?"\u2611" : "\u2610"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="TextDetail" x="159" y="50" width="56" height="20" uuid="d019ce4b-1f39-4c6f-80f4-f1f5a9c9c5d5"/>
+				<textFieldExpression><![CDATA["ค่าเช่าบ้าน"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="TextDetail" x="242" y="50" width="48" height="20" uuid="06afc66b-7b10-4208-a0f9-cb2a2ba54cc0"/>
+				<textFieldExpression><![CDATA["ค่าเช่าซื้อ"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="TextDetail" x="327" y="50" width="79" height="20" uuid="abe2555d-3516-49bb-ad6e-8f05d8b77f9e"/>
+				<textFieldExpression><![CDATA["ค่าผ่อนชำระเงินกู้"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement key="" style="Checkbox" x="228" y="53" width="30" height="30" uuid="e133a504-7509-4276-b1bd-3224462124de"/>
+				<textFieldExpression><![CDATA["2".equals($P{paymentCost} )?"\u2611" : "\u2610"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement key="" style="Checkbox" x="313" y="53" width="30" height="30" uuid="4ee3f72e-2aa7-4171-a1fc-855166d811a4"/>
+				<textFieldExpression><![CDATA["3".equals($P{paymentCost} )?"\u2611" : "\u2610"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="TextDetail" x="0" y="70" width="30" height="20" uuid="b5c98f9a-34bb-4dc4-8c0e-516ec045c370"/>
+				<textFieldExpression><![CDATA["ได้แก่"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="TextDetail" x="237" y="71" width="100" height="19" uuid="f84bfa49-18f0-4ad6-81ab-db033ca71dce"/>
+				<textFieldExpression><![CDATA["ประจำเดือน"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="TextDetail" x="0" y="90" width="80" height="20" uuid="ff884129-7514-499a-8eb5-57ad906f2851"/>
+				<textFieldExpression><![CDATA["ตามใบเสร็จรับเงิน"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement key="" style="TextDetailCenter" x="109" y="90" width="30" height="20" uuid="cf0af2dc-013a-428a-b658-4bb9446187c1"/>
+				<textFieldExpression><![CDATA["ฉบับ"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement key="" style="TextDetailCenter" x="139" y="90" width="50" height="20" uuid="7de302eb-9c92-40c6-b198-7a14eb95288a"/>
+				<textFieldExpression><![CDATA["เป็นจำนวน"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="TextDetailBold" x="253" y="90" width="30" height="20" uuid="38523061-17b5-439f-807a-22ad7a729ac3"/>
+				<textFieldExpression><![CDATA["บาท"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="TextDetail" x="40" y="111" width="100" height="20" uuid="15bd5bdf-1ec4-4b5e-9540-fa1a49af366b"/>
+				<textFieldExpression><![CDATA["๑.๒ ข้าพเจ้าได้รับเงิน	เดือนละ"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="TextDetailBold" x="200" y="111" width="30" height="20" uuid="dad853af-4670-4442-a1c2-5b32cd729e43"/>
+				<textFieldExpression><![CDATA["บาท"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="TextDetail" x="42" y="-20" width="194" height="20" uuid="27c510b0-eded-4988-81e0-1ff55eb8f54a"/>
+				<textFieldExpression><![CDATA[$P{name}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="36" y="-6" width="200" height="1" uuid="4eca4f31-4b32-45df-b473-e3b888c6680c"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement style="TextDetail" x="42" y="6" width="194" height="20" uuid="12e53602-45d8-4be1-b272-35ade5b5410c"/>
+				<textFieldExpression><![CDATA[$P{affiliation}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="36" y="20" width="200" height="1" uuid="b6f442f6-c264-45a2-9510-7fde066680fc"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement style="TextDetail" x="30" y="70" width="230" height="20" uuid="bbf0b72c-8394-4d8e-9bf6-95bcec6a53b7"/>
+				<textFieldExpression><![CDATA[$P{paymentFor}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="TextDetailCenter" x="287" y="71" width="63" height="19" uuid="3c7c40a4-88de-4d71-bcaa-076441257bd0"/>
+				<textFieldExpression><![CDATA[$P{period}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement key="" style="TextDetailCenter" x="77" y="90" width="28" height="20" uuid="e6a871ea-829b-46da-893b-3d793ce11a1f"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$P{refReceipts}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement key="" style="TextDetailCenter" x="192" y="90" width="60" height="20" uuid="df2e08b0-ba65-41ba-8884-9f0c716be5e6"/>
+				<textFieldExpression><![CDATA[$P{billAmount}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="TextDetailCenter" x="125" y="111" width="70" height="20" uuid="d4fd520e-2753-4eac-a5aa-270913e7cd8c"/>
+				<textFieldExpression><![CDATA[$P{salary}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="TextDetailCenter" x="288" y="90" width="160" height="20" uuid="8bd1cc81-2d4a-4d10-ac68-d9d9b323738c"/>
+				<textFieldExpression><![CDATA["("+$P{billAmountText}+")"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="TextDetailCenter" x="235" y="111" width="215" height="20" uuid="b7066133-b2f4-410a-9f2a-81ee8e854302"/>
+				<textFieldExpression><![CDATA["("+$P{salaryText}+")"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="TextDetail" x="0" y="131" width="290" height="20" uuid="b7faf2b1-6ac8-43a8-8cf1-365a3cd38615"/>
+				<textFieldExpression><![CDATA["มีสิทธิได้รับค่าเช่าบ้านตามที่ได้รับอนุมัติในแบบขอรับค่าเช่าบ้าน (แบบ ๖๐๐๕) เลขที่"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="TextDetail" x="0" y="151" width="60" height="20" uuid="012c5afb-0fde-4ae2-9d2c-aaa0238b15e1"/>
+				<textFieldExpression><![CDATA["ไม่เกินเดือนละ"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="TextDetailBold" x="160" y="151" width="30" height="20" uuid="caa8d1a2-26be-4461-b47b-d855c0fc092a"/>
+				<textFieldExpression><![CDATA["บาท"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="TextDetailCenter" x="200" y="151" width="184" height="20" uuid="601fca25-d07e-4b13-b0fd-2ae3ab4a2958"/>
+				<textFieldExpression><![CDATA["("+$P{notOverText}+")"]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement style="TextDetailCenter" x="293" y="131" width="98" height="20" uuid="123d4892-0163-4fe0-9159-3e00bc436337"/>
+				<textFieldExpression><![CDATA[$P{form6005No}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="TextDetail" x="40" y="171" width="183" height="19" uuid="76affae6-5a84-4d4b-a1f7-7f12836ddcf8"/>
+				<textFieldExpression><![CDATA["๑.๓ ข้าพเจ้าขอเบิกเงินค่าเช่าบ้านประจำเดือน"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="TextDetail" x="-1" y="190" width="21" height="20" uuid="89829342-23c1-441b-96a6-178effd18a35"/>
+				<textFieldExpression><![CDATA["รวม		เดือน"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="TextDetail" x="53" y="190" width="66" height="20" uuid="7e5168e9-01ce-464f-a07c-234263036c01"/>
+				<textFieldExpression><![CDATA["เดือน เป็นเงิน"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="TextDetailBold" x="222" y="189" width="30" height="24" uuid="26955bb4-d68c-43aa-9c92-51c53dbd2725"/>
+				<textFieldExpression><![CDATA["บาท"]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement style="TextDetailCenter" x="259" y="191" width="148" height="20" uuid="d9676c17-b06b-4185-a7fc-8693d8d24714"/>
+				<textFieldExpression><![CDATA["("+$P{totalWithdrawText}+")"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="TextDetail" x="40" y="210" width="188" height="20" uuid="310b9a3d-26eb-48fa-a861-14a1ca6289cc"/>
+				<textFieldExpression><![CDATA["๑.๔ พร้อมนี้ข้าพเจ้าได้แนบใบเสร็จรับเงินจำนวน"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="TextDetail" x="20" y="230" width="440" height="20" uuid="8d197d6b-7668-4a6e-9201-9866148e7e14"/>
+				<textFieldExpression><![CDATA["๒. ข้าพเจ้าขอรับรองว่าข้อความที่ให้ไว้ข้างต้นเป็นความจริงทุกประการ และข้าพเจ้ามีสิทธิได้รับเงินค่าเช่าบ้าน"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="TextDetail" x="33" y="250" width="424" height="24" uuid="c2049b9d-104f-452e-8948-f72ba8447613"/>
+				<textFieldExpression><![CDATA["ตามพระราชกฤษฎีกา ค่าเช่าบ้านข้าราชการ พ.ศ.๒๕๔๗ และได้ดำเนินการถูกต้องตามระเบียบทุกประการแล้ว"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="TextDetailCenter" x="66" y="151" width="84" height="20" uuid="08f9aa82-ac5b-48ab-b02e-194ff34a1502"/>
+				<textFieldExpression><![CDATA[$P{notOver}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="TextDetailCenter" x="218" y="171" width="120" height="20" uuid="ecf24f15-fad7-4051-8ef9-ad0bc0b4ce63"/>
+				<textFieldExpression><![CDATA[$P{periodWithdraw}+" ถึง "+$P{periodWithdrawTo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="TextDetailCenter" x="20" y="191" width="30" height="20" uuid="b1265ee6-9a64-4805-ac70-91a8aa07a522"/>
+				<textFieldExpression><![CDATA[$P{totalMonthThaiNumber}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="TextDetailCenter" x="114" y="190" width="102" height="20" uuid="31d0dd8a-b337-4404-b298-49e5f7fcf442"/>
+				<textFieldExpression><![CDATA[$P{totalWithdraw}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="TextDetailCenter" x="231" y="210" width="50" height="20" uuid="65c7ce33-040b-452e-8a2e-a705e7ef5201"/>
+				<textFieldExpression><![CDATA[$P{receiptsNumber}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="TextDetail" x="285" y="210" width="80" height="20" uuid="642d607a-3155-4061-ac35-5024d2e1fd52"/>
+				<textFieldExpression><![CDATA["ฉบับ มาด้วยแล้ว"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="TextDetail" x="240" y="281" width="208" height="20" uuid="ef12e219-ee82-4ac2-9861-afa1e43e7530"/>
+				<textFieldExpression><![CDATA["(ลงชื่อ).............................................................ผู้ขอเบิก"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="TextDetail" x="268" y="301" width="150" height="20" uuid="74b9593d-16f3-485d-987b-36d6ca1e47d9"/>
+				<textFieldExpression><![CDATA["(..........................................................)"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="TextDetail" x="240" y="321" width="194" height="20" uuid="9aba9afb-d8cf-4c95-8800-c38166f1d4d6"/>
+				<textFieldExpression><![CDATA["ตำแหน่ง......................................................................."]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="TextDetail" x="240" y="341" width="194" height="20" uuid="735a5d77-4626-40d9-ad6f-2cd8a130a301"/>
+				<textFieldExpression><![CDATA["วันที่...........เดือน.................................พ.ศ..............."]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Topic2" x="20" y="358" width="81" height="24" uuid="34cee3aa-a533-44f6-acfb-3ff29e598636"/>
+				<textFieldExpression><![CDATA["๒. การอนุมัติ"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="TextDetail" x="40" y="376" width="170" height="20" uuid="949c92dc-c8b4-41cf-9537-761d8398178d"/>
+				<textFieldExpression><![CDATA["อนุญาติให้เบิกจ่ายเงินค่าเช่าบ้านตามสิทธิ"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="TextDetail" x="90" y="396" width="228" height="20" uuid="9a17c0d2-8ea9-4740-b42a-ff95b7eda37a"/>
+				<textFieldExpression><![CDATA["ตั้งแต่วันที่..............เดือน.............................พ.ศ......๒๕๕......"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="TextDetail" x="240" y="426" width="194" height="20" uuid="50dc4458-96ec-46ba-b639-7730b7e559d4"/>
+				<textFieldExpression><![CDATA["(ลงชื่อ)............................................................."]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="TextDetail" x="263" y="446" width="150" height="20" uuid="41075ba9-44d6-4be0-ad76-e1aa72d20901"/>
+				<textFieldExpression><![CDATA["(..........................................................)"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="TextDetail" x="240" y="466" width="194" height="20" uuid="e0158bb2-6e8d-4bea-bda0-549b27bab3e1"/>
+				<textFieldExpression><![CDATA["ตำแหน่ง......................................................................."]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="TextDetail" x="240" y="486" width="194" height="20" uuid="984f9ae6-3cad-46f9-bc07-094f33a6358c"/>
+				<textFieldExpression><![CDATA["วันที่..........เดือน.................................พ.ศ..............."]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Topic2" x="20" y="513" width="69" height="29" uuid="db8cc98e-f633-4c0a-86ea-ea50dad1c775"/>
+				<textFieldExpression><![CDATA["๓. การรับเงิน"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="TextDetail" x="40" y="536" width="606" height="19" uuid="08a9a2c1-b2d5-4693-8833-65bbc07e2f10"/>
+				<textFieldExpression><![CDATA["ได้รับเงินค่าเช้าบ้าน จำนวน.......................................บาท (..............................................................................) ไว้ถูกต้องแล้ว"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="TextDetail" x="240" y="565" width="194" height="20" uuid="2a92d72a-c21d-4497-8b17-163b20357208"/>
+				<textFieldExpression><![CDATA["(ลงชื่อ).........................................................ผู้รับเงิน"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="TextDetail" x="263" y="585" width="150" height="20" uuid="ad8f6ce5-b333-4657-9cb4-06c03e61b016"/>
+				<textFieldExpression><![CDATA["(..........................................................)"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="TextDetail" x="240" y="605" width="194" height="20" uuid="6211f414-f4ff-4eef-b02b-bd5b87b212cf"/>
+				<textFieldExpression><![CDATA["วันที่..........เดือน................................พ.ศ.............."]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="TextDetail" x="240" y="635" width="194" height="20" uuid="4045f92d-1217-4a5a-84c4-20e2ca94f523"/>
+				<textFieldExpression><![CDATA["(ลงชื่อ)..........................................................ผู้รับเงิน"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="TextDetail" x="262" y="655" width="150" height="20" uuid="06a16fed-69bb-4ec9-af46-1a56dfa65ae0"/>
+				<textFieldExpression><![CDATA["(..........................................................)"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="TextDetail" x="240" y="675" width="194" height="20" uuid="ee3a622e-f32b-4a3f-ac47-c6bedb1b928e"/>
+				<textFieldExpression><![CDATA["วันที่...........เดือน.................................พ.ศ..............."]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="TextDetail" x="295" y="-20" width="163" height="20" uuid="5e3109f1-6139-4951-8d46-4994af54c247"/>
+				<textFieldExpression><![CDATA[$P{position}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="288" y="-6" width="170" height="1" uuid="32c955d1-e83c-40cc-93f3-984b1345b26b"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="30" y="84" width="200" height="1" uuid="a685ad27-468d-4960-a714-7a3f74179cde"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="287" y="86" width="63" height="1" uuid="ab4aaaa5-81b8-4013-b9ed-1ac8e05b0a4c"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="75" y="104" width="30" height="1" uuid="a008930a-4e4f-43ee-8ed6-1bb21e14e7f8"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="285" y="104" width="163" height="1" uuid="239ef8c9-bc66-49b1-b816-1eb951e3af1b"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement key="" style="TextDetailCenter" x="191" y="103" width="60" height="1" uuid="804c39ca-0506-41b4-bbff-4c71cb52cda4"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="125" y="125" width="70" height="1" uuid="5edc0063-bc1f-4b4d-ba08-013670ca4ba1"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="236" y="126" width="215" height="1" uuid="023f4400-5a12-423a-b748-e1259c3e900d"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="67" y="165" width="85" height="1" uuid="ce4bcfee-8151-4c08-b246-4ad0d459acef"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="201" y="165" width="185" height="1" uuid="b00d12bc-21ad-4bb6-baae-9f8e6fc6c9ad"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="20" y="205" width="30" height="1" uuid="2266bb57-c24e-4f69-a1e0-9403e9033fa5"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="116" y="203" width="100" height="1" uuid="78e4f5cd-17b8-44a0-82bc-6c7981893455"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="257" y="204" width="150" height="1" uuid="9c76ee2c-ea95-4180-bcb6-a91c54fe8436"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="231" y="224" width="50" height="1" uuid="2080fb3f-b382-4580-8623-740e06dd7b96"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="218" y="185" width="120" height="1" uuid="d7152f98-fe23-45a3-9a1d-4d4c7d9bb591"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement key="" style="TextDetailCenter" x="292" y="146" width="99" height="1" uuid="6b957266-92b9-450b-8f9a-7433eeab276a"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+		</band>
+	</pageHeader>
+</jasperReport>

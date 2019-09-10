@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is JAX-WS RI 2.1.7-hudson-48-. --><definitions xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://dexsrvint.excise.go.th/wsdl/LDAPGateway/LDPAGAuthenAndGetUserRole" xmlns:ns="http://dexsrvint.excise.go.th/schema/AuthenAndGetUserRole" xmlns:plnk="http://docs.oasis-open.org/wsbpel/2.0/plnktype" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" name="LDPAGAuthenAndGetUserRole" targetNamespace="http://dexsrvint.excise.go.th/wsdl/LDAPGateway/LDPAGAuthenAndGetUserRole">
+    <types>
+        <xsd:schema targetNamespace="http://dexsrvint.excise.go.th/wsdl/LDAPGateway/LDPAGAuthenAndGetUserRole">
+            <xsd:import namespace="http://dexsrvint.excise.go.th/schema/AuthenAndGetUserRole" schemaLocation="../xsd/LDPAGAuthenAndGetUserRoleService2.xsd" />
+        </xsd:schema>
+    </types>
+    <message name="LDPAGAuthenAndGetUserRoleOperationRequest">
+        <part name="requestObj" element="ns:RequestObj" />
+    </message>
+    <message name="LDPAGAuthenAndGetUserRoleOperationResponse">
+        <part name="responseObj" element="ns:ResponseObj" />
+    </message>
+    <portType name="LDPAGAuthenAndGetUserRolePortType">
+        <operation name="LDPAGAuthenAndGetUserRoleOperation">
+            <input name="input1" message="tns:LDPAGAuthenAndGetUserRoleOperationRequest" />
+            <output name="output1" message="tns:LDPAGAuthenAndGetUserRoleOperationResponse" />
+        </operation>
+    </portType>
+    <binding name="LDPAGAuthenAndGetUserRoleBinding" type="tns:LDPAGAuthenAndGetUserRolePortType">
+        <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http" />
+        <operation name="LDPAGAuthenAndGetUserRoleOperation">
+            <soap:operation />
+            <input name="input1">
+                <soap:body use="literal" />
+            </input>
+            <output name="output1">
+                <soap:body use="literal" />
+            </output>
+        </operation>
+    </binding>
+    <service name="LDPAGAuthenAndGetUserRoleService">
+        <port name="LDPAGAuthenAndGetUserRolePort" binding="tns:LDPAGAuthenAndGetUserRoleBinding">
+            <soap:address location="http://dexsrvint.excise.go.th:5080/LDAPGateway/LDPAGAuthenAndGetUserRoleService" />
+        </port>
+    </service>
+    <plnk:partnerLinkType name="LDPAGAuthenAndGetUserRole">
+        <!-- A partner link type is automatically generated when a new port type is added. Partner link types are used by BPEL processes. 
+In a BPEL process, a partner link represents the interaction between the BPEL process and a partner service. Each partner link is associated with a partner link type.
+A partner link type characterizes the conversational relationship between two services. The partner link type can have one or two roles.-->
+        <plnk:role name="LDPAGAuthenAndGetUserRolePortTypeRole" portType="tns:LDPAGAuthenAndGetUserRolePortType" />
+    </plnk:partnerLinkType>
+</definitions>

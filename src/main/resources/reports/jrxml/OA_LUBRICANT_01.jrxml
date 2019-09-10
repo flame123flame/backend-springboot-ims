@@ -1,0 +1,945 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.5.1.final using JasperReports Library version 6.5.1  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Solvent-01" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="5ff592d7-a807-4b93-9bb7-d05e674c7168">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<pageHeader>
+		<band height="801" splitType="Stretch">
+			<textField>
+				<reportElement x="-10" y="32" width="580" height="30" uuid="f112cabd-1247-4ec7-8871-064f6f5e3456"/>
+				<textElement textAlignment="Center">
+					<font fontName="TH Sarabun New" size="20" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["บันทึกการตรวจปฏิบัติการตัวแทนหรือผู้ใช้"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="-11" y="59" width="580" height="30" uuid="773aee27-4f6a-4cff-9896-c90165250463"/>
+				<textElement textAlignment="Center">
+					<font fontName="TH Sarabun New" size="20" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["น้ำมันหล่อลื่นที่ได้รับสิทธฺอัตราศูนย์"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="440" y="10" width="100" height="23" uuid="0e902d2d-e303-47a6-931f-7f022d7a6e21"/>
+				<textElement>
+					<font fontName="TH Sarabun New" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA["แบบ Lubricant ๐๑"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="336" y="107" width="40" height="23" uuid="019b7981-e3d3-4ecd-b720-f24022353bf8"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="TH Sarabun New" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA["เขียนที่"]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="369" y="100" width="149" height="23" uuid="68840b5d-2b98-44f4-a522-4009bd5ea9e9"/>
+				<box topPadding="1" leftPadding="5" bottomPadding="0" rightPadding="1">
+					<bottomPen lineWidth="1.0" lineStyle="Dotted"/>
+				</box>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="TH Sarabun New" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="296" y="130" width="26" height="23" uuid="abcece0d-7b8f-4c61-b984-10b254833cfc"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="TH Sarabun New" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA["วันที่"]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="319" y="124" width="46" height="23" uuid="36b33cf5-56ca-4732-8aa7-15139cc94b73"/>
+				<box leftPadding="3">
+					<bottomPen lineWidth="1.0" lineStyle="Dotted"/>
+				</box>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="TH Sarabun New" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="366" y="130" width="26" height="23" uuid="70a46f59-e5e5-4046-9779-f762235b2450"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="TH Sarabun New" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA["เดือน"]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="392" y="124" width="64" height="23" uuid="14429168-9513-4c2b-bcef-a1de3629a382"/>
+				<box leftPadding="3">
+					<bottomPen lineWidth="1.0" lineStyle="Dotted"/>
+				</box>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="TH Sarabun New" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="456" y="130" width="26" height="23" uuid="b06cb63f-11c3-4624-b145-cc388e88ce38"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="TH Sarabun New" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA["พ.ศ."]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="479" y="124" width="39" height="23" uuid="ace9fd25-16a5-4312-a3ac-8c533c1af62a"/>
+				<box leftPadding="2">
+					<bottomPen lineWidth="1.0" lineStyle="Dotted"/>
+				</box>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="TH Sarabun New" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="40" y="157" width="50" height="23" uuid="0505b69b-8e9a-44d8-b6a7-8d53e3823cb5"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="TH Sarabun New" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA["วันนี้ เวลา"]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="86" y="151" width="38" height="23" uuid="04874801-1625-44a0-989d-31793b00a080"/>
+				<box leftPadding="5">
+					<bottomPen lineWidth="1.0" lineStyle="Dotted"/>
+				</box>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="TH Sarabun New" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="126" y="157" width="20" height="23" uuid="f16da06b-ae31-4e1b-8c3d-688d85ef1db4"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="TH Sarabun New" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA["น."]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="186" y="151" width="163" height="23" uuid="650a863e-a59c-4b02-9e32-55a5edac9bb5"/>
+				<box leftPadding="5">
+					<bottomPen lineWidth="1.0" lineStyle="Dotted"/>
+				</box>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="TH Sarabun New" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="355" y="157" width="45" height="23" uuid="cc8c851d-ecc7-4391-9cc0-5227bd4b88b7"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="TH Sarabun New" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA["ตำแหน่ง"]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="397" y="151" width="120" height="23" uuid="637b5152-a899-4949-a2a4-353c2d03cef9"/>
+				<box>
+					<bottomPen lineWidth="1.0" lineStyle="Dotted"/>
+				</box>
+				<textElement>
+					<font fontName="TH Sarabun New" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="40" y="180" width="50" height="23" uuid="f524a639-d99e-410d-8562-4eeb7429f8ba"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="TH Sarabun New" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA["พร้อมด้วย"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="98" y="180" width="20" height="23" uuid="0f36ae39-6101-4f4f-be43-0cf4e2f2d44d"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="TH Sarabun New" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA["(๑)"]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="118" y="174" width="232" height="23" uuid="7ad7972b-c27f-4c04-b425-c5dc925fb38c"/>
+				<box bottomPadding="0" rightPadding="0">
+					<bottomPen lineWidth="1.0" lineStyle="Dotted"/>
+				</box>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="TH Sarabun New" size="16"/>
+				</textElement>
+			</textField>
+			<textField>
+				<reportElement x="355" y="180" width="45" height="23" uuid="c090041c-1914-440f-b37a-8113969aed89"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="TH Sarabun New" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA["ตำแหน่ง"]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="397" y="174" width="120" height="23" uuid="d5aa58c8-57e9-4f42-bf13-b69459e6a254"/>
+				<box>
+					<bottomPen lineWidth="1.0" lineStyle="Dotted"/>
+				</box>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="TH Sarabun New" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="98" y="203" width="20" height="23" uuid="1e18a689-9dc9-4016-8d3c-5c08d6b7c279"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="TH Sarabun New" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA["(๒)"]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="118" y="197" width="232" height="23" uuid="a62d815a-41ca-4556-b19e-0ccb3c1ad0a2"/>
+				<box>
+					<bottomPen lineWidth="1.0" lineStyle="Dotted"/>
+				</box>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="TH Sarabun New" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="355" y="203" width="45" height="23" uuid="d1a77027-9ace-47d3-af4f-c460e3df21f2"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="TH Sarabun New" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA["ตำแหน่ง"]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="397" y="197" width="120" height="23" uuid="25a57cc0-cdb2-45eb-8860-8e2ae8916160"/>
+				<box>
+					<bottomPen lineWidth="1.0" lineStyle="Dotted"/>
+				</box>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="TH Sarabun New" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="98" y="226" width="20" height="23" uuid="0b6d2ec0-63c0-4146-aa10-3e3dac2b7ec8"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="TH Sarabun New" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA["(๓)"]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="119" y="220" width="232" height="23" uuid="f475b795-0cb3-4c73-9d00-907564b07dbf"/>
+				<box>
+					<bottomPen lineWidth="1.0" lineStyle="Dotted"/>
+				</box>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="TH Sarabun New" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="355" y="227" width="45" height="23" uuid="8642b543-935a-4ccc-bd66-bf0cc0cd6094"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="TH Sarabun New" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA["ตำแหน่ง"]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="397" y="221" width="120" height="23" uuid="6ed19e28-e830-42d0-951b-802e693d8ba1"/>
+				<box>
+					<bottomPen lineWidth="1.0" lineStyle="Dotted"/>
+				</box>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="TH Sarabun New" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="98" y="249" width="20" height="23" uuid="ee51f0fc-510d-4b30-a3bb-c8c54e5ca57c"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="TH Sarabun New" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA["(๔)"]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="119" y="244" width="232" height="23" uuid="80c19f02-66c7-423f-aad5-7d7d924e20c9"/>
+				<box>
+					<bottomPen lineWidth="1.0" lineStyle="Dotted"/>
+				</box>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="TH Sarabun New" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="355" y="250" width="45" height="23" uuid="334ed5e4-7e8e-4d5c-b2bd-dda3d565f941"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="TH Sarabun New" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA["ตำแหน่ง"]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="397" y="245" width="120" height="23" uuid="5691c64a-07d1-4be3-a5a1-4e466880a6b5"/>
+				<box>
+					<bottomPen lineWidth="1.0" lineStyle="Dotted"/>
+				</box>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="TH Sarabun New" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="40" y="277" width="30" height="23" uuid="490e2851-1805-4128-8329-8702c7ba1a54"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="TH Sarabun New" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA["สังกัด"]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="68" y="271" width="281" height="23" uuid="a2eed545-9553-4568-a835-2de1f6e38c46"/>
+				<box leftPadding="5">
+					<bottomPen lineWidth="1.0" lineStyle="Dotted"/>
+				</box>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="TH Sarabun New" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="352" y="276" width="78" height="23" uuid="3d8debef-2c3a-4fe3-9115-845f475f7ec7"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="TH Sarabun New" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA["ได้มาตรวจสอบ"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="75" y="304" width="440" height="23" uuid="32cb4c1a-1e81-4670-a2e3-c2a6d99793a9"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="TH Sarabun New" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA["ผู้ใช้ที่ประกอบกิจการเป็นตัวแทนในการซื้อน้ำมันหล่อลื่นเพื่อจําหน่ายให้แก่ผู้ที่ใช้ที่นำน้ำมันหล่อลื่นไปใช้"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="45" y="329" width="274" height="23" uuid="8b19678c-da98-4851-821a-6bf668207200"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="TH Sarabun New" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA["เป็นวัตถุดิบในการผลิตสิ่งของอื่น"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="73" y="356" width="274" height="23" uuid="ea0d7bd7-71e4-422c-b53b-1490ee723c8b"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="TH Sarabun New" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA["ผู้ที่นำน้ำมันหล่อลื่นไปใช้เป็นวัตถุดิบในการผลิตสิ่งของอื่น"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="41" y="384" width="22" height="23" uuid="aba3be87-0704-4254-aab0-21fb64fdfd74"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="TH Sarabun New" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA["ชื่อ"]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="59" y="377" width="180" height="23" uuid="7d04a6ea-4022-4bb8-8c7e-c22f56ee725f"/>
+				<box leftPadding="5">
+					<bottomPen lineWidth="1.0" lineStyle="Dotted"/>
+				</box>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="TH Sarabun New" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="240" y="383" width="55" height="23" uuid="eaa876f1-8700-45b1-a1c7-b72978708222"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="TH Sarabun New" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA["ตั้งอยู่เลขที่"]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="289" y="377" width="105" height="23" uuid="81d59b21-3c40-4a34-93a8-a811c36d6c4d"/>
+				<box leftPadding="5">
+					<bottomPen lineWidth="1.0" lineStyle="Dotted"/>
+				</box>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="TH Sarabun New" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="397" y="382" width="55" height="23" uuid="9af91b67-c101-494d-bfae-fbd5adb19445"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="TH Sarabun New" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA["ตรอก/ซอย"]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="448" y="376" width="70" height="23" uuid="d63ddec0-d30f-417b-b9de-2a5d6ebb8348"/>
+				<box leftPadding="2">
+					<bottomPen lineWidth="1.0" lineStyle="Dotted"/>
+				</box>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="TH Sarabun New" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="41" y="405" width="29" height="23" uuid="0b96fbfa-7320-4289-90b4-d00a9dacf97e"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="TH Sarabun New" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA["หมู่ที่"]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="63" y="398" width="35" height="23" uuid="76b8644b-dab1-4b5c-841c-ca7318cff5a4"/>
+				<box leftPadding="2">
+					<bottomPen lineWidth="1.0" lineStyle="Dotted"/>
+				</box>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="TH Sarabun New" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="102" y="405" width="24" height="23" uuid="5a8f4d1f-7265-4c82-a7ac-6b15d00750ee"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="TH Sarabun New" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA["ถนน"]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="124" y="398" width="86" height="23" uuid="8cc3120a-f27f-4682-ab8f-f0797282759f"/>
+				<box>
+					<bottomPen lineWidth="1.0" lineStyle="Dotted"/>
+				</box>
+				<textElement>
+					<font fontName="TH Sarabun New" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="210" y="405" width="55" height="23" uuid="f2c298b9-ce38-49b3-a3c9-65a99423d9f7"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="TH Sarabun New" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA["ตำบล/แขวง"]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="265" y="399" width="122" height="23" uuid="17d70c6d-bf2c-4911-8d42-47f739fe8a9d"/>
+				<box leftPadding="5">
+					<bottomPen lineWidth="1.0" lineStyle="Dotted"/>
+				</box>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="TH Sarabun New" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="389" y="405" width="55" height="23" uuid="ea2ad222-4a63-4c47-b047-002b1b3336c1"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="TH Sarabun New" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA["อำเภอ/เขต"]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="442" y="399" width="76" height="23" uuid="2988e306-bbb0-4ea8-96a9-cc428ca6eb98"/>
+				<box leftPadding="2">
+					<bottomPen lineWidth="1.0" lineStyle="Dotted"/>
+				</box>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="TH Sarabun New" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="41" y="428" width="34" height="23" uuid="5c6cdf60-0dd2-4aaf-9b7d-ee75cd0e6e46"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="TH Sarabun New" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA["จังหวัด"]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="75" y="422" width="75" height="23" uuid="d6c2d080-191f-494e-9587-4067bad46c89"/>
+				<box leftPadding="2">
+					<bottomPen lineWidth="1.0" lineStyle="Dotted"/>
+				</box>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="TH Sarabun New" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="150" y="428" width="40" height="23" uuid="f1bf7511-fb87-4fb4-b5d5-f7ae8c2a1364"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="TH Sarabun New" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA["โทรศัพท์"]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="190" y="422" width="100" height="23" uuid="f200956f-6fbf-4b13-b795-b0da6faa4bbe"/>
+				<box leftPadding="5">
+					<bottomPen lineWidth="1.0" lineStyle="Dotted"/>
+				</box>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="TH Sarabun New" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="292" y="427" width="26" height="23" uuid="46b25ca6-f8e8-4162-9251-4e6f3b8d3f32"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="TH Sarabun New" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA["ซึ่งมี"]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="316" y="422" width="202" height="23" uuid="31ef4fdc-dfab-4898-93c9-175851e3a0e4"/>
+				<box leftPadding="2">
+					<bottomPen lineWidth="1.0" lineStyle="Dotted"/>
+				</box>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="TH Sarabun New" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="41" y="451" width="168" height="23" uuid="dc4cb520-140e-4b46-8cbc-59e967b576fa"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="TH Sarabun New" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA["ฐานะเป็นเจ้าของหรือผู้จัดการหรือเป็น"]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="209" y="444" width="308" height="23" uuid="38f1fac4-5384-440b-a55d-33766f367539"/>
+				<box leftPadding="5">
+					<bottomPen lineWidth="1.0" lineStyle="Dotted"/>
+				</box>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="TH Sarabun New" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="41" y="475" width="204" height="23" uuid="fee786c0-959b-4a2e-b474-647dfae4a001"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="TH Sarabun New" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA["เป็นผู้นําการตรวจบัตรประจําตัวประชาชนเลขที่"]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="241" y="469" width="276" height="23" uuid="644dd069-d3b2-43fc-bfd0-62048416b2b2"/>
+				<box leftPadding="5">
+					<bottomPen lineWidth="1.0" lineStyle="Dotted"/>
+				</box>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="TH Sarabun New" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="63" y="499" width="66" height="23" uuid="44fc69ce-d3eb-41f8-8b68-9d16d851bed1"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="TH Sarabun New" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA["1. ข้าพเจ้า"]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="113" y="493" width="147" height="23" uuid="9c619acc-be5a-4fdb-9bfc-ac1560dda567"/>
+				<box leftPadding="5">
+					<bottomPen lineWidth="1.0" lineStyle="Dotted"/>
+				</box>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="TH Sarabun New" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="260" y="500" width="256" height="23" uuid="79b5b5bf-5f73-4df0-bce3-557128e55340"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="TH Sarabun New" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA["ขอให้ข้อมูลเกี่ยวกับการดําเนินการตามรายละเอียดแนบท้าย"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="63" y="517" width="455" height="23" uuid="5e727c5d-e44a-4f5a-9abf-adf29584f0f9"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="TH Sarabun New" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA["๒. ในการตรวจสอบครั้งนี้ข้าพเจ้าผู้รับการตรวจขอยืนยันว่า เจ้าพนักงานผู้ทําการตรวจสอบดังรายนามข้างต้น"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="42" y="534" width="474" height="23" uuid="d6124984-d7b5-4cc4-aecb-74f628806015"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="TH Sarabun New" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA["ทุกคนได้กระทําการโดยสุภาพเรียบร้อย และไม่ได้ปฏิบัติหน้าที่ให้เป็นการขัดขวางการปฏิบัติงานหรือการดําเนิน"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="41" y="550" width="474" height="23" uuid="1c83b026-7a1a-4873-a7b1-ff906b020f5a"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="TH Sarabun New" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA["กิจการค้าของข้าพเจ้า ทั้งมิได้กระทําให้ทรัพย์สินหรือเอกสารชํารุดเสียหายและสูญหายและไม่ได้เรียกร้องทรัพย์สิน"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="42" y="566" width="474" height="23" uuid="f23e6be4-03e7-4304-afc2-9affcf23e0be"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="TH Sarabun New" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA["เงินทองแต่ประการใด และข้าพเจ้าขอรับรองว่าข้อความดังกล่าวข้างต้นถูกต้องตรงกับ ข้อเท็จจริงทุกประการ"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="42" y="584" width="474" height="23" uuid="ec24a770-9550-4961-8434-4840dabd397a"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="TH Sarabun New" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA["จึงลงลายมือชื่อไว้เป็นสําคัญ"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="77" y="602" width="147" height="23" uuid="fcb97f68-a3dd-49e9-a22f-c717f48ba311"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="TH Sarabun New" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA["๓. การตรวจปฏิบัติการเสร็จ เวลา"]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="220" y="595" width="86" height="23" uuid="beb7e908-84e1-4102-a559-bf18b600f95e"/>
+				<box leftPadding="5">
+					<bottomPen lineWidth="1.0" lineStyle="Dotted"/>
+				</box>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="TH Sarabun New" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="307" y="602" width="25" height="23" uuid="8926781f-133e-4785-abde-ee76674d8bea"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="TH Sarabun New" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA["น."]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="45" y="650" width="31" height="23" uuid="58f0afa7-2c56-4193-a44e-c1188b91a81e"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="TH Sarabun New" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA["(ลงชื่อ)"]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="77" y="643" width="112" height="23" uuid="8ceb7cd9-12f0-4097-a8dd-df5c2cf1ded3"/>
+				<box>
+					<bottomPen lineWidth="1.0" lineStyle="Dotted"/>
+				</box>
+				<textElement>
+					<font fontName="TH Sarabun New" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="190" y="650" width="56" height="23" uuid="7f8a030c-96de-4f06-b06c-2f1901e17e79"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="TH Sarabun New" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA["เจ้าพนักงาน"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="302" y="650" width="31" height="23" uuid="612c9927-bb78-4458-9b4f-d22b1d7f6e5a"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="TH Sarabun New" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA["(ลงชื่อ)"]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="334" y="643" width="112" height="23" uuid="be41109e-b745-4ef0-9517-f93c7b4885cd"/>
+				<box>
+					<bottomPen lineWidth="1.0" lineStyle="Dotted"/>
+				</box>
+				<textElement>
+					<font fontName="TH Sarabun New" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="447" y="650" width="56" height="23" uuid="c05fa8ee-26e1-4306-8451-3f42f8c340d9"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="TH Sarabun New" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA["ผู้ให้ถ้อยคำ"]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="76" y="662" width="112" height="23" uuid="19b9138b-f0e3-44fd-8caf-890044858b47"/>
+				<box>
+					<bottomPen lineWidth="1.0" lineStyle="Dotted"/>
+				</box>
+				<textElement>
+					<font fontName="TH Sarabun New" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="188" y="668" width="12" height="23" uuid="d9856e33-bd2b-4335-8301-6b4daec1aec3"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="TH Sarabun New" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[")"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="71" y="668" width="12" height="23" uuid="e6d7c6d7-44bd-4169-8a3b-2e2358ba7674"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="TH Sarabun New" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA["("]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="45" y="692" width="31" height="23" uuid="14ae76ee-a680-4797-8d59-459ac9d2ecca"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="TH Sarabun New" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA["(ลงชื่อ)"]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="77" y="685" width="112" height="23" uuid="34163d65-097d-42b3-81b1-ab764a8ab4b8"/>
+				<box>
+					<bottomPen lineWidth="1.0" lineStyle="Dotted"/>
+				</box>
+				<textElement>
+					<font fontName="TH Sarabun New" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="71" y="710" width="12" height="23" uuid="3e3a79e3-f8a6-47ff-86cb-3aac2a75fe5f"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="TH Sarabun New" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA["("]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="76" y="704" width="112" height="23" uuid="eb21629a-ac73-4c8e-a9e8-d0774f7b842f"/>
+				<box>
+					<bottomPen lineWidth="1.0" lineStyle="Dotted"/>
+				</box>
+				<textElement>
+					<font fontName="TH Sarabun New" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="188" y="710" width="12" height="23" uuid="06285ad4-dc9d-4395-b1c3-bfd9e5ea92bb"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="TH Sarabun New" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[")"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="190" y="692" width="56" height="23" uuid="2cc6919e-c6a9-4205-a3d7-9cb8c20b1636"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="TH Sarabun New" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA["พยาน"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="45" y="732" width="31" height="23" uuid="6f040160-4ce9-4e9d-9a56-59942ab9b353"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="TH Sarabun New" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA["(ลงชื่อ)"]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="77" y="725" width="112" height="23" uuid="f8f35739-06d6-4c43-8a61-8f24ff29fe31"/>
+				<box>
+					<bottomPen lineWidth="1.0" lineStyle="Dotted"/>
+				</box>
+				<textElement>
+					<font fontName="TH Sarabun New" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="71" y="750" width="12" height="23" uuid="6330cd99-10dd-466c-a57f-5772cb4cfc95"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="TH Sarabun New" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA["("]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="76" y="744" width="112" height="23" uuid="c20b659c-2776-4bca-8926-e14c26137433"/>
+				<box>
+					<bottomPen lineWidth="1.0" lineStyle="Dotted"/>
+				</box>
+				<textElement>
+					<font fontName="TH Sarabun New" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="188" y="750" width="12" height="23" uuid="648613f7-0161-4fc6-9e6c-dc35e7d0e553"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="TH Sarabun New" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[")"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="190" y="732" width="56" height="23" uuid="a15d33fd-5f4a-4328-9e2b-6364636cecd6"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="TH Sarabun New" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA["พยาน"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="329" y="667" width="12" height="23" uuid="8ab9229e-1029-4f27-93fd-275f9fe0f4ae"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="TH Sarabun New" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA["("]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="334" y="661" width="112" height="23" uuid="68ae39e7-e0ad-4b75-bed4-36847b722ca2"/>
+				<box>
+					<bottomPen lineWidth="1.0" lineStyle="Dotted"/>
+				</box>
+				<textElement>
+					<font fontName="TH Sarabun New" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="446" y="667" width="12" height="23" uuid="d2b623a6-008c-4253-b085-d5015a4559ef"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="TH Sarabun New" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[")"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="302" y="691" width="31" height="23" uuid="b752e524-07b1-4f20-8d4b-3bb120e71636"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="TH Sarabun New" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA["(ลงชื่อ)"]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="334" y="684" width="112" height="23" uuid="8774b8a9-67ed-4faf-9587-eb0110ba1ee9"/>
+				<box>
+					<bottomPen lineWidth="1.0" lineStyle="Dotted"/>
+				</box>
+				<textElement>
+					<font fontName="TH Sarabun New" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="447" y="691" width="56" height="23" uuid="50094189-b77b-429d-9053-72d9033d0cdb"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="TH Sarabun New" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA["เจ้าพนักงาน"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="329" y="708" width="12" height="23" uuid="58d3afce-edce-44ea-b323-4cd2f161750e"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="TH Sarabun New" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA["("]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="334" y="702" width="112" height="23" uuid="f91a507e-454e-4470-ae50-324da1cd283c"/>
+				<box>
+					<bottomPen lineWidth="1.0" lineStyle="Dotted"/>
+				</box>
+				<textElement>
+					<font fontName="TH Sarabun New" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="446" y="708" width="12" height="23" uuid="7ae4d338-aa53-4e53-8be7-2543432433e4"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="TH Sarabun New" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[")"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="302" y="731" width="31" height="23" uuid="fdadd9ce-3258-4242-9706-9faea8395791"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="TH Sarabun New" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA["(ลงชื่อ)"]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="334" y="742" width="112" height="23" uuid="03b067dc-4174-4edd-89d9-cea07e22e866"/>
+				<box>
+					<bottomPen lineWidth="1.0" lineStyle="Dotted"/>
+				</box>
+				<textElement>
+					<font fontName="TH Sarabun New" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="329" y="748" width="12" height="23" uuid="867a5657-98df-4afb-bb22-41641771e0d0"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="TH Sarabun New" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA["("]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="334" y="724" width="112" height="23" uuid="8074881e-6c36-46ca-af14-b09236a6b763"/>
+				<box>
+					<bottomPen lineWidth="1.0" lineStyle="Dotted"/>
+				</box>
+				<textElement>
+					<font fontName="TH Sarabun New" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="447" y="731" width="56" height="23" uuid="08f66d21-3b54-42de-8136-86e859195904"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="TH Sarabun New" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA["เจ้าพนักงาน"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="446" y="748" width="12" height="23" uuid="893fef67-8b92-470c-9b1a-557497205eb0"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="TH Sarabun New" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[")"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="456" y="748" width="62" height="23" uuid="9dca6f34-6fcc-4c4a-9042-020c6a5a6c8c"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="TH Sarabun New" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA["ผู้บันทึก/อ่าน"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="151" y="157" width="38" height="23" uuid="2e2cd56b-1ddb-4249-bed2-f93b94d3d0cd"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="TH Sarabun New" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA["ข้าพเจ้า"]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement positionType="FixRelativeToBottom" x="48" y="303" width="20" height="22" uuid="0ffed6d5-e10d-474e-9bb5-595c3daa6a4e"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="DejaVu Sans" size="15"/>
+				</textElement>
+				<textFieldExpression><![CDATA["\u2610"]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement positionType="FixRelativeToBottom" x="48" y="355" width="20" height="22" uuid="1a120e36-f3ea-4208-8b9d-e196f58e2c6b"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="DejaVu Sans" size="15"/>
+				</textElement>
+				<textFieldExpression><![CDATA["\u2610"]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+</jasperReport>

@@ -1,0 +1,477 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.5.1.final using JasperReports Library version 6.5.1  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="TA_FORM_TS04_24" pageWidth="842" pageHeight="595" orientation="Landscape" whenNoDataType="AllSectionsNoDetail" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="40" bottomMargin="40" uuid="f52612fc-fcca-4a08-bd7b-698b8f566bea">
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<style name="font" fontName="TH Sarabun New" fontSize="8"/>
+	<parameter name="formTsNumber" class="java.lang.String"/>
+	<parameter name="factoryName" class="java.lang.String"/>
+	<parameter name="auditMonthStart" class="java.lang.String"/>
+	<parameter name="auditMonthEnd" class="java.lang.String"/>
+	<parameter name="auditYear" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="recNo" class="java.lang.String"/>
+	<field name="operatorOfficeName" class="java.lang.String"/>
+	<field name="operatorFullName" class="java.lang.String"/>
+	<field name="ownerFullName" class="java.lang.String"/>
+	<field name="newRegId" class="java.lang.String"/>
+	<field name="factoryTypeText" class="java.lang.String"/>
+	<field name="callDocNo" class="java.lang.String"/>
+	<field name="callDocDate" class="java.util.Date"/>
+	<field name="auditDateStart" class="java.util.Date"/>
+	<field name="auditDateEnd" class="java.util.Date"/>
+	<field name="taxAmt" class="java.math.BigDecimal"/>
+	<field name="fineAmt" class="java.math.BigDecimal"/>
+	<field name="extraAmt" class="java.math.BigDecimal"/>
+	<field name="moiAmt" class="java.math.BigDecimal"/>
+	<field name="nettaxAmt" class="java.math.BigDecimal"/>
+	<field name="residueNum" class="java.lang.String"/>
+	<field name="officerComment" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<pageHeader>
+		<band height="65" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="22" width="799" height="16" uuid="def0ced4-2af0-4102-accf-9e09332e385d"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="TH Sarabun New" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["สรุปรายงานผลการตรวจสอบภาษีสรรพสามิต"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="font" x="210" y="43" width="12" height="12" uuid="521dda6e-4e39-49a5-a33f-09c3291dc588"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA["ของ"]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement style="font" x="222" y="43" width="98" height="12" uuid="126cbd1f-29a8-474d-b6f5-8b0bc2cafca0"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{factoryName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="font" x="320" y="43" width="25" height="12" uuid="3ccf5e04-bf1e-472f-b9c6-ea1d33dc9fa2"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA["ตั้งแต่เดือน"]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement style="font" x="345" y="43" width="85" height="12" uuid="d94d6161-5f47-4e31-845b-d945194cf8e2"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{auditMonthStart}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="font" x="430" y="43" width="8" height="12" uuid="f3b88b11-0eb6-4926-83f4-3ffddfeb84b0"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA["ถึง"]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement style="font" x="438" y="43" width="85" height="12" uuid="05d1ea57-40e4-429b-a0d1-5b63da31a94d"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{auditMonthEnd}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="font" x="523" y="43" width="12" height="12" uuid="ecbf03cb-b4eb-4da3-ab0e-62d5d3fd3d71"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA["พ.ศ"]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement style="font" x="535" y="43" width="78" height="12" uuid="58f4fe06-f9cb-4d68-82e7-5c00e5e83c6c"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{auditYear}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="220" y="51" width="99" height="1" uuid="df65ca3d-d254-46d9-aa64-0778ec86f1b8"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="345" y="51" width="86" height="1" uuid="01b1f62e-0316-4451-a6b0-4ff642adead3"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="437" y="51" width="86" height="1" uuid="ff5af4ca-6542-4f61-a7ce-9e81b45514b8"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="533" y="51" width="79" height="1" uuid="75c52489-1763-4d9d-807d-bd7ec45d21e0"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement style="font" x="729" y="5" width="69" height="16" uuid="b4ba6dc8-f486-4dbb-98d6-c0282c0c53b3"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA["ต.ส ๐๔-๒๔"]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="48" splitType="Stretch">
+			<textField>
+				<reportElement style="font" x="0" y="0" width="16" height="48" uuid="0683dac0-7de6-498f-814e-510dbbc0f0b7"/>
+				<box>
+					<pen lineWidth="0.25" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA["ลำดับ\nที"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="font" x="16" y="0" width="134" height="20" uuid="bf0442d2-dce9-4fe7-b081-d859e9d4cabc"/>
+				<box>
+					<pen lineWidth="0.25" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA["หน่วยงานที่ขออนุมัติตรวจสอบภาษี"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="font" x="16" y="20" width="63" height="28" uuid="357f2ecc-f875-4fe8-ab89-9d73f730624a"/>
+				<box>
+					<pen lineWidth="0.25" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA["ฝ่ายตรวจสอบ"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="font" x="79" y="20" width="71" height="28" uuid="abd1d881-f043-4728-801a-474816d1a866"/>
+				<box>
+					<pen lineWidth="0.25" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA["ผู้ตรวจสอบ"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="font" x="150" y="0" width="200" height="20" uuid="24aaa4ea-cd79-449e-b8e6-9bf76ac08875"/>
+				<box>
+					<pen lineWidth="0.25" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA["ผู้เสียภาษี"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="font" x="150" y="20" width="90" height="28" uuid="8076c55b-2ff5-406e-afcf-8620603a2c76"/>
+				<box>
+					<pen lineWidth="0.25" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA["ชื่อผู้เสียภาษี"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="font" x="240" y="20" width="56" height="28" uuid="91850d3f-19ad-4fe8-a6f9-211e8ff271c3"/>
+				<box>
+					<pen lineWidth="0.25" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA["ทะเบียน\nสรรพสามิต"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="font" x="296" y="20" width="54" height="28" uuid="20299934-44ef-4fe1-a71f-ba79bd45bba1"/>
+				<box>
+					<pen lineWidth="0.25" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA["ประเภท\nสินค้า/บริการ"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="font" x="350" y="0" width="110" height="20" uuid="d4ab8bb2-8fde-48ba-ba1e-a83a721cef7f"/>
+				<box>
+					<pen lineWidth="0.25" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA["อนุมัติออกหนังสือเรียก"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="font" x="350" y="20" width="24" height="28" uuid="2b34ae8a-ed2f-48f1-8199-8ceaf773a75f"/>
+				<box>
+					<pen lineWidth="0.25" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA["เลขที่"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="font" x="374" y="20" width="32" height="28" uuid="d7b47139-c90a-4f59-8369-ac4746554c7b"/>
+				<box>
+					<pen lineWidth="0.25" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA["วันที่\nอนุมัติ"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="font" x="406" y="20" width="54" height="28" uuid="0e225192-81b4-4ab3-bed9-0e9355a2f887"/>
+				<box>
+					<pen lineWidth="0.25" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA["ช่วงเวลาที่\nตรวจสอบ"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="font" x="460" y="0" width="260" height="20" uuid="10b4065a-0496-4d58-8023-510422e9e8e8"/>
+				<box>
+					<pen lineWidth="0.25" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA["ผลการตรวจสอบภาษี"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="font" x="720" y="0" width="34" height="48" uuid="4f1790ee-b320-4d4b-8a9d-3b18d5652562"/>
+				<box>
+					<pen lineWidth="0.25" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA["เรื่องตกค้าง\nเมื่อสิ้นงวด (ราย)"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="font" x="754" y="0" width="48" height="48" uuid="c25b8334-fc4d-40bb-8b95-263f0702a3e4"/>
+				<box>
+					<pen lineWidth="0.25" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA["หมายเหตุ"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="font" x="460" y="20" width="52" height="28" uuid="03c28b47-1623-415e-a27e-d63c27eed978"/>
+				<box>
+					<pen lineWidth="0.25" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA["ภาษี\nสรรพสามิต"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="font" x="512" y="20" width="52" height="28" uuid="356fd172-b5ae-462b-9454-01b4f6cc5a73"/>
+				<box>
+					<pen lineWidth="0.25" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA["เบี้ยปรับ"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="font" x="564" y="20" width="52" height="28" uuid="b9db77e5-366c-4160-9077-14e0bf7bb7d1"/>
+				<box>
+					<pen lineWidth="0.25" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA["เงินเพิ่ม"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="font" x="616" y="20" width="52" height="28" uuid="60d4f4b5-6c6c-490a-b2f9-ad4c59e293d6"/>
+				<box>
+					<pen lineWidth="0.25" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA["ภาษีเพื่อ\nราชการส่วน\nท้องถิ่น"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="font" x="668" y="20" width="52" height="28" uuid="cac8225f-8d9f-4b36-b1f1-11032b51a976"/>
+				<box>
+					<pen lineWidth="0.25" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA["รวมเงิน"]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="18" splitType="Stretch">
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="font" stretchType="ContainerHeight" x="0" y="0" width="16" height="18" uuid="9368b046-4adb-4543-977c-2f5640d7bbfb"/>
+				<box>
+					<pen lineWidth="0.25" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{recNo}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="font" stretchType="ContainerHeight" x="16" y="0" width="63" height="18" uuid="5549f4c0-f544-49a4-8194-388fb1f7df4c"/>
+				<box>
+					<pen lineWidth="0.25" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{operatorOfficeName}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="font" stretchType="ContainerHeight" x="79" y="0" width="71" height="18" uuid="8d42161a-173e-4290-a335-07429915ba8d"/>
+				<box>
+					<pen lineWidth="0.25" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{operatorFullName}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="font" stretchType="ContainerHeight" x="150" y="0" width="90" height="18" uuid="4469aa1f-3a51-40a6-98d5-4516798323d6"/>
+				<box>
+					<pen lineWidth="0.25" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{ownerFullName}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="font" stretchType="ContainerHeight" x="240" y="0" width="56" height="18" uuid="fc3c86cd-1994-4966-92f8-39df3a22c3f5"/>
+				<box>
+					<pen lineWidth="0.25" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{newRegId}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="font" stretchType="ContainerHeight" x="296" y="0" width="54" height="18" uuid="26ec2ce6-7882-4bd5-bac0-266a4de5c0e3"/>
+				<box>
+					<pen lineWidth="0.25" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{factoryTypeText}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="font" stretchType="ContainerHeight" x="350" y="0" width="24" height="18" uuid="b0fa28bd-3a90-4556-8bd1-2fc07a1bacb3"/>
+				<box>
+					<pen lineWidth="0.25" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{callDocNo}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="font" stretchType="ContainerHeight" x="374" y="0" width="32" height="18" uuid="dc5f38a7-4101-44cb-a584-cb91ee3d98ad"/>
+				<box>
+					<pen lineWidth="0.25" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[new SimpleDateFormat("dd/MM/yy",new Locale("th", "TH")).format($F{callDocDate})]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="font" stretchType="ContainerHeight" x="406" y="0" width="54" height="18" uuid="53002945-4c79-432a-ac37-9c86123cba04"/>
+				<box>
+					<pen lineWidth="0.25" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[($F{auditDateStart}!= null ? new SimpleDateFormat("dd/MM/yy",new Locale("th", "TH")).format($F{auditDateStart}) : "") + 
+     ($F{auditDateEnd} != null ? "\n  ถึง  \n" + new SimpleDateFormat("dd/MM/yy",new Locale("th", "TH")).format($F{auditDateEnd}) : "")]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="font" stretchType="ContainerHeight" x="460" y="0" width="42" height="18" uuid="4bee7933-30cf-48d3-a937-baf6f29785fa"/>
+				<box>
+					<pen lineWidth="0.25" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{taxAmt} != null ? (new DecimalFormat("#,##0.00").format($F{taxAmt}).split("\\.")[0]) : ""]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="font" stretchType="ContainerHeight" x="502" y="0" width="10" height="18" uuid="436f68d3-3b4d-489a-bfd0-47d5de754e33"/>
+				<box>
+					<pen lineWidth="0.25" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{taxAmt} != null ? (new DecimalFormat("#,##0.00").format($F{taxAmt}).split("\\.")[1]) : ""]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="#,##0.00" isBlankWhenNull="true">
+				<reportElement style="font" stretchType="ContainerHeight" x="512" y="0" width="42" height="18" uuid="76f3abe0-bd3a-4345-a40a-d56422a239e6"/>
+				<box>
+					<pen lineWidth="0.25" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{fineAmt} != null ? (new DecimalFormat("#,##0.00").format($F{fineAmt}).split("\\.")[0]) : ""]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="font" stretchType="ContainerHeight" x="554" y="0" width="10" height="18" uuid="afed305c-84d0-4d0e-8d8d-eafc4f37b920"/>
+				<box>
+					<pen lineWidth="0.25" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{fineAmt} != null ? (new DecimalFormat("#,##0.00").format($F{fineAmt}).split("\\.")[1]) : ""]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="#,##0.00" isBlankWhenNull="true">
+				<reportElement style="font" stretchType="ContainerHeight" x="564" y="0" width="42" height="18" uuid="0695cfd9-aa49-486f-a1b8-d33b16e22747"/>
+				<box>
+					<pen lineWidth="0.25" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{extraAmt} != null ? (new DecimalFormat("#,##0.00").format($F{extraAmt}).split("\\.")[0]) : ""]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="font" stretchType="ContainerHeight" x="606" y="0" width="10" height="18" uuid="4f72ca73-baac-46c2-8781-06152a34de5c"/>
+				<box>
+					<pen lineWidth="0.25" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{extraAmt} != null ? (new DecimalFormat("#,##0.00").format($F{extraAmt}).split("\\.")[1]) : ""]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="#,##0.00" isBlankWhenNull="true">
+				<reportElement style="font" stretchType="ContainerHeight" x="616" y="0" width="42" height="18" uuid="08859ac3-10e2-4b68-b677-bbb3e155aa94"/>
+				<box>
+					<pen lineWidth="0.25" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<paragraph lineSpacing="1_1_2"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{moiAmt} != null ? (new DecimalFormat("#,##0.00").format($F{moiAmt}).split("\\.")[0]) : ""]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="font" stretchType="ContainerHeight" x="658" y="0" width="10" height="18" uuid="cb01162d-9fa7-4447-b0a4-c19c09c6075d"/>
+				<box>
+					<pen lineWidth="0.25" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{moiAmt} != null ? (new DecimalFormat("#,##0.00").format($F{moiAmt}).split("\\.")[1]) : ""]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="#,##0.00" isBlankWhenNull="true">
+				<reportElement style="font" stretchType="ContainerHeight" x="668" y="0" width="42" height="18" uuid="b381ddb0-3526-47bf-b221-630baed46c01"/>
+				<box>
+					<pen lineWidth="0.25" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{nettaxAmt} != null ? (new DecimalFormat("#,##0.00").format($F{nettaxAmt}).split("\\.")[0]) : ""]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="font" stretchType="ContainerHeight" x="720" y="0" width="34" height="18" uuid="90cc5742-679d-44a3-b7b4-622412213edd"/>
+				<box>
+					<pen lineWidth="0.25" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{residueNum}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="font" stretchType="ContainerHeight" x="754" y="0" width="48" height="18" uuid="c0899878-8831-47a0-826c-6ea7d807341a"/>
+				<box>
+					<pen lineWidth="0.25" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{officerComment}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="font" stretchType="ContainerHeight" x="710" y="0" width="10" height="18" uuid="5d575b4c-abc1-45a6-ab67-656b5357a37a"/>
+				<box>
+					<pen lineWidth="0.25" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{nettaxAmt} != null ? (new DecimalFormat("#,##0.00").format($F{nettaxAmt}).split("\\.")[1]) : ""]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="26">
+			<textField isBlankWhenNull="true">
+				<reportElement key="" x="0" y="8" width="150" height="15" uuid="2d169f8a-3c25-42ee-b666-86f1fdfd09f4">
+					<printWhenExpression><![CDATA[!($P{formTsNumber} == null || $P{formTsNumber}.length() == 0)]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="TH Sarabun New" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA["เลขที่เอกสารจากระบบ  "+$P{formTsNumber}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>

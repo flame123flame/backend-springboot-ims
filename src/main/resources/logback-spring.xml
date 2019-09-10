@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+	
+	<!-- Initial Properties -->
+	<springProperty scope="context" name="logPath" source="app.logging.path" defaultValue="/tmp/excise-backend/logs"/>
+	<springProperty scope="context" name="minIndex" source="app.logging.rolling-file-appender.min-index" defaultValue="1"/>
+	<springProperty scope="context" name="maxIndex" source="app.logging.rolling-file-appender.max-index" defaultValue="5"/>
+	<springProperty scope="context" name="maxFileSize" source="app.logging.rolling-file-appender.max-file-size" defaultValue="1MB"/>
+	<property name="logPattern" value="%d{yyyy-MM-dd HH:mm:ss} %-5level %file:%line - %msg%n%throwable" />
+	
+	<!-- Console Appender -->
+	<appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+		<layout class="ch.qos.logback.classic.PatternLayout">
+<!-- 			<Pattern>${logPattern}</Pattern> -->
+			<Pattern>%d{yyyy-MM-dd HH:mm:ss} %-5level \(%file:%line\) - %msg%n%throwable</Pattern>
+		</layout>
+	</appender>
+	
+	<!-- Rolling File Appender -->
+	<appender name="ROLLINGFILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>${logPath}/excise-backend.log</file>
+		<encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+			<Pattern>${logPattern}</Pattern>
+		</encoder>
+		<rollingPolicy class="ch.qos.logback.core.rolling.FixedWindowRollingPolicy">
+			<fileNamePattern>${logPath}/excise-backend.%i.log</fileNamePattern>
+			<minIndex>${minIndex}</minIndex>
+			<maxIndex>${maxIndex}</maxIndex>
+		</rollingPolicy>
+		<triggeringPolicy class="ch.qos.logback.core.rolling.SizeBasedTriggeringPolicy">
+			<maxFileSize>${maxFileSize}</maxFileSize>
+		</triggeringPolicy>
+	</appender>
+	
+	<!-- Root Logger -->
+	<root level="INFO">
+		<appender-ref ref="STDOUT" />
+	</root>
+	
+	<!-- Local Log Level -->
+	<logger name="th.co.baiwa.buckwaframework" level="DEBUG" additivity="false">
+		<appender-ref ref="STDOUT" />
+	</logger>
+	<logger name="th.go.excise.ims" level="DEBUG" additivity="false">
+		<appender-ref ref="STDOUT" />
+	</logger>
+	<logger name="th.co.baiwa.buckwaframework.common.persistence.jdbc" level="INFO" additivity="false">
+		<appender-ref ref="STDOUT" />
+	</logger>
+<!-- 	<logger name="org.springframework.transaction.interceptor" level="TRACE" additivity="false"> -->
+<!-- 		<appender-ref ref="STDOUT" /> -->
+<!-- 	</logger> -->
+	
+	<!-- DEV Profile Log Level -->
+	<springProfile name="dev">
+		<logger name="th.co.baiwa.buckwaframework" level="INFO" additivity="false">
+			<appender-ref ref="STDOUT" />
+			<appender-ref ref="ROLLINGFILE" />
+		</logger>
+		<logger name="th.go.excise.ims" level="INFO" additivity="false">
+			<appender-ref ref="STDOUT" />
+			<appender-ref ref="ROLLINGFILE" />
+		</logger>
+	</springProfile>
+	
+</configuration>

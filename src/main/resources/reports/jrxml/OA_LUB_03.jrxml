@@ -1,0 +1,433 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.6.0.final using JasperReports Library version 6.6.0  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Report_03" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="519c6b2b-d2fb-4902-bde7-b7c1167d3cbb">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<style name="Style1" fontName="TH Sarabun New" fontSize="15"/>
+	<parameter name="asaleToAgent" class="java.lang.String"/>
+	<parameter name="asaleToUser" class="java.lang.String"/>
+	<parameter name="asaleAgentLicense" class="java.lang.String"/>
+	<parameter name="asaleUserLicense" class="java.lang.String"/>
+	<parameter name="sentToAgent" class="java.lang.String"/>
+	<parameter name="sentToUser" class="java.lang.String"/>
+	<parameter name="materail" class="java.lang.String"/>
+	<parameter name="document" class="java.math.BigDecimal"/>
+	<parameter name="productProcess" class="java.lang.String"/>
+	<parameter name="productNextime" class="java.lang.String"/>
+	<parameter name="useStartDate" class="java.lang.String"/>
+	<parameter name="useEndDate" class="java.lang.String"/>
+	<parameter name="buyOverlimit" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<pageHeader>
+		<band height="801" splitType="Stretch">
+			<textField isBlankWhenNull="true">
+				<reportElement x="43" y="183" width="459" height="103" uuid="a9eac1ea-1280-42ce-bdba-edd97a263718"/>
+				<textElement>
+					<font fontName="TH Sarabun New" size="15"/>
+				</textElement>
+				<textFieldExpression><![CDATA["                                                      " + ($P{materail} != null ? $P{materail} : "" )]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="14" width="554" height="20" uuid="3fdb174a-1edf-4853-88e1-aeb84ed45af5"/>
+				<textElement textAlignment="Center">
+					<font fontName="TH Sarabun New" size="15"/>
+				</textElement>
+				<textFieldExpression><![CDATA["-๕-"]]></textFieldExpression>
+			</textField>
+			<ellipse>
+				<reportElement x="47" y="51" width="3" height="3" backcolor="#000000" uuid="dc90c6f4-85f5-4c17-9ee8-da57b210e1df"/>
+			</ellipse>
+			<textField>
+				<reportElement x="59" y="42" width="132" height="20" uuid="667c1a0d-bb27-437a-9442-14e450acfb98"/>
+				<textElement>
+					<font fontName="TH Sarabun New" size="15"/>
+				</textElement>
+				<textFieldExpression><![CDATA["การจำหน่าย"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="291" y="62" width="66" height="20" uuid="5b963fa4-4b30-42d4-bfde-49d7a66d72bc"/>
+				<textElement>
+					<font fontName="TH Sarabun New" size="15"/>
+				</textElement>
+				<textFieldExpression><![CDATA["ผู้ได้รับอนุญาต"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="406" y="62" width="74" height="20" uuid="b327f57d-7e7c-4e6a-ae36-8a756c09b221"/>
+				<textElement>
+					<font fontName="TH Sarabun New" size="15"/>
+				</textElement>
+				<textFieldExpression><![CDATA["ผู้ไม่ได้รับอนุญาต"]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement positionType="FixRelativeToBottom" x="314" y="86" width="20" height="20" uuid="3c7a8aaf-8052-4631-9eb7-d6e28e868f27"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="DejaVu Sans" size="15"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($P{asaleAgentLicense}!=null&&"Y".equals($P{asaleAgentLicense})) ? "\u2611" : "\u2610"]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement positionType="FixRelativeToBottom" x="314" y="110" width="20" height="20" uuid="02fb0df8-997a-456e-af01-bef16752418e"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="DejaVu Sans" size="15"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($P{asaleUserLicense}!=null&&"Y".equals($P{asaleUserLicense})) ? "\u2611" : "\u2610"]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement positionType="FixRelativeToBottom" x="314" y="134" width="20" height="20" uuid="5a295e8a-47b5-4f24-b67d-56b90375f4e7"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="DejaVu Sans" size="15"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($P{sentToUser}!=null&&"Y".equals($P{sentToUser})) ? "\u2611" : "\u2610"]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement positionType="FixRelativeToBottom" x="429" y="87" width="20" height="20" uuid="47b0679b-8c26-44a1-be3f-231418f50526"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="DejaVu Sans" size="15"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($P{asaleAgentLicense}!=null&&"N".equals($P{asaleAgentLicense})) ? "\u2611" : "\u2610"]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement positionType="FixRelativeToBottom" x="429" y="111" width="20" height="20" uuid="159643cd-fb06-447b-a585-e2222ebe422a"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="DejaVu Sans" size="15"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($P{asaleUserLicense}!=null&&"N".equals($P{asaleUserLicense})) ? "\u2611" : "\u2610"]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement positionType="FixRelativeToBottom" x="174" y="86" width="20" height="20" uuid="453005e0-0a16-4d27-bdbd-fe1be4a41156"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="DejaVu Sans" size="15"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($P{asaleToAgent}!=null&&"Y".equals($P{asaleToAgent})) ? "\u2611" : "\u2610"]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement positionType="FixRelativeToBottom" x="174" y="110" width="20" height="20" uuid="0dc36af2-4eba-48b6-b704-eb493bc6844c"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="DejaVu Sans" size="15"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($P{asaleToUser}!=null&&"Y".equals($P{asaleToUser})) ? "\u2611" : "\u2610"]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement positionType="FixRelativeToBottom" x="174" y="134" width="20" height="20" uuid="9e963926-4469-43ec-a809-a51876f3d179"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="DejaVu Sans" size="15"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($P{sentToAgent}!=null&&"Y".equals($P{sentToAgent})) ? "\u2611" : "\u2610"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Style1" x="199" y="87" width="101" height="20" uuid="05e1ba67-2ba6-488d-be66-44840cf2318f"/>
+				<textElement>
+					<font fontName="TH Sarabun New" size="15"/>
+				</textElement>
+				<textFieldExpression><![CDATA["ตัวแทน"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Style1" x="199" y="111" width="41" height="20" uuid="b682d2b9-626f-4769-84c4-1b864aeab999"/>
+				<textElement>
+					<font fontName="TH Sarabun New" size="15"/>
+				</textElement>
+				<textFieldExpression><![CDATA["ผู้ใช้"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Style1" x="199" y="135" width="101" height="20" uuid="2abc8081-cdaf-41ce-a3dd-18bcf3878a8b"/>
+				<textElement>
+					<font fontName="TH Sarabun New" size="15"/>
+				</textElement>
+				<textFieldExpression><![CDATA["ส่งต่อตัวแทนทอดต่อไป"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Style1" x="42" y="135" width="101" height="20" uuid="c9afa0ed-33fe-4d86-9ff5-3645291961e7"/>
+				<textElement>
+					<font fontName="TH Sarabun New" size="15"/>
+				</textElement>
+				<textFieldExpression><![CDATA["๖.๒ วิธีการจำหน่าย"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Style1" x="339" y="135" width="90" height="20" uuid="31b4fa84-5375-435b-8cfe-d5fc008d7ba9"/>
+				<textElement>
+					<font fontName="TH Sarabun New" size="15"/>
+				</textElement>
+				<textFieldExpression><![CDATA["ส่งต่อผู้ใช้โดยตรง"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Style1" x="50" y="183" width="172" height="20" uuid="947e05b4-577b-4dc8-b143-30e7e7bdbee0"/>
+				<textElement>
+					<font fontName="TH Sarabun New" size="15"/>
+				</textElement>
+				<textFieldExpression><![CDATA["๗.๑ วัตถุดิบและภาชนะ(ระบุรายละเอียด)"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Style1" x="50" y="286" width="190" height="20" uuid="9c536230-4876-4d7b-8c42-f3e1f0f5e3dd"/>
+				<textElement>
+					<font fontName="TH Sarabun New" size="15"/>
+				</textElement>
+				<textFieldExpression><![CDATA["๗.๒ ขั้นตอนการผลิต (เอกสารประกอบ จำนวน"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Style1" x="50" y="409" width="348" height="20" uuid="09538950-6cbd-4447-9b6b-7c1a54d0120d"/>
+				<textElement>
+					<font fontName="TH Sarabun New" size="15"/>
+				</textElement>
+				<textFieldExpression><![CDATA["๗.๓ สินค้าและผลิตภัณฑ์ที่จะผลิต(ระบุประเภท/ชนิด/ตราสินค้า)"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement stretchType="RelativeToTallestObject" x="37" y="160" width="476" height="20" uuid="72c90555-97ef-4e8a-b509-ac1bb28f0307"/>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement>
+					<font fontName="TH Sarabun New" size="15" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" ๗. กรรมวิธีในการผลิต (รายเก่า/รายใหม่/สถานะผู้ใช้)"]]></textFieldExpression>
+			</textField>
+			<ellipse>
+				<reportElement x="75" y="616" width="3" height="3" backcolor="#000000" uuid="1a9253fc-eca8-4830-a0cc-d2f27422b0b7"/>
+			</ellipse>
+			<textField>
+				<reportElement x="87" y="607" width="180" height="20" uuid="238baa8c-7d8e-4b7a-902b-4559035693e7"/>
+				<textElement>
+					<font fontName="TH Sarabun New" size="15"/>
+				</textElement>
+				<textFieldExpression><![CDATA["การซื้อน้ำมันหล่อลื่นมีจำนวนการซื้อ"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement stretchType="RelativeToTallestObject" x="37" y="537" width="476" height="20" uuid="607ac317-e93f-4b7b-a5f2-1101dc7a6d24"/>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement>
+					<font fontName="TH Sarabun New" size="15" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" ๘. การสุ่มตรวจ (เฉพาะรายเก่า สถานะผู้ใช้)"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Style1" x="50" y="559" width="463" height="20" uuid="2135cd5d-2075-4b3f-8a95-ac67bcbe11a2"/>
+				<textElement>
+					<font fontName="TH Sarabun New" size="15"/>
+				</textElement>
+				<textFieldExpression><![CDATA["๘.๑ การสุ่มตรวจจำนวนการซื้อและการใช้หรือการจำหน่ายน้ำมันหล่อลื่น เปรียบเทียบจำนวนที่ได้รับอนุญาต"]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement positionType="FixRelativeToBottom" x="196" y="627" width="20" height="20" uuid="091255e8-f1bd-4e5d-bc45-f732a3ed6f1c"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="DejaVu Sans" size="15"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($P{buyOverlimit}!=null&&"N".equals($P{buyOverlimit})) ? "\u2611" : "\u2610"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Style1" x="221" y="628" width="110" height="20" uuid="610ee820-dce2-4c61-892d-abebf91077c7"/>
+				<textElement>
+					<font fontName="TH Sarabun New" size="15"/>
+				</textElement>
+				<textFieldExpression><![CDATA["ไม่เกินจากที่ได้รับอนุญาต"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Style1" x="362" y="628" width="118" height="20" uuid="207f5076-8ed1-4273-9276-c35dcf34881e"/>
+				<textElement>
+					<font fontName="TH Sarabun New" size="15"/>
+				</textElement>
+				<textFieldExpression><![CDATA["เกินจากที่ได้รับอนุญาต"]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement positionType="FixRelativeToBottom" x="337" y="627" width="20" height="20" uuid="46548886-8fbc-4f25-8894-ba69cc85add9"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="DejaVu Sans" size="15"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($P{buyOverlimit}!=null&&"Y".equals($P{buyOverlimit})) ? "\u2611" : "\u2610"]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="216" y="198" width="286" height="1" uuid="cf8c9c7f-398e-402f-89da-d647782e93bf"/>
+				<graphicElement>
+					<pen lineWidth="1.0" lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="43" y="218" width="459" height="1" uuid="dd2e125e-70ff-4353-86ac-1fd020c718c4"/>
+				<graphicElement>
+					<pen lineWidth="1.0" lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="43" y="237" width="459" height="1" uuid="93fcd7cd-6645-4f8f-a967-1558143eb113"/>
+				<graphicElement>
+					<pen lineWidth="1.0" lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="43" y="258" width="459" height="1" uuid="e6494e67-45da-4004-ba26-c84562db04f9"/>
+				<graphicElement>
+					<pen lineWidth="1.0" lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="43" y="278" width="459" height="1" uuid="3faa3427-8bb3-4856-ac20-09b09d25b4f9"/>
+				<graphicElement>
+					<pen lineWidth="1.0" lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<textField isBlankWhenNull="true">
+				<reportElement x="43" y="305" width="459" height="103" uuid="28eabd8a-0a91-459b-9e3a-698e68f5b21b"/>
+				<textElement>
+					<font fontName="TH Sarabun New" size="15"/>
+				</textElement>
+				<textFieldExpression><![CDATA["     " + ($P{productProcess} != null ? $P{productProcess} : "")]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="43" y="400" width="459" height="1" uuid="0efe0c6f-c5e2-4b72-be15-bb88745f2a82"/>
+				<graphicElement>
+					<pen lineWidth="1.0" lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="43" y="380" width="459" height="1" uuid="903a38cf-ef63-4e47-a21a-a878f574d6a5"/>
+				<graphicElement>
+					<pen lineWidth="1.0" lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="43" y="359" width="459" height="1" uuid="dd87eaad-3b7c-4c83-baa9-296768740476"/>
+				<graphicElement>
+					<pen lineWidth="1.0" lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="43" y="340" width="459" height="1" uuid="a07abab1-5a33-4813-9fe1-54db6809ab7f"/>
+				<graphicElement>
+					<pen lineWidth="1.0" lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="43" y="320" width="459" height="1" uuid="50dd3649-4c16-44d4-a536-11153bd0cbdd"/>
+				<graphicElement>
+					<pen lineWidth="1.0" lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<textField isBlankWhenNull="true">
+				<reportElement x="43" y="428" width="459" height="103" uuid="b5ab44ab-6431-4420-a55a-4c3ed90d6a73"/>
+				<textElement>
+					<font fontName="TH Sarabun New" size="15"/>
+				</textElement>
+				<textFieldExpression><![CDATA["     " + ($P{productNextime} != null ? $P{productNextime} : "")]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="43" y="522" width="459" height="1" uuid="91a97ef7-419e-4bac-b631-886cee90c106"/>
+				<graphicElement>
+					<pen lineWidth="1.0" lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="43" y="503" width="459" height="1" uuid="fe5fe501-55e0-4f5e-bc56-6e1130500676"/>
+				<graphicElement>
+					<pen lineWidth="1.0" lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="43" y="482" width="459" height="1" uuid="9c39a980-1ba1-4f4d-907f-23f4a1f41e4b"/>
+				<graphicElement>
+					<pen lineWidth="1.0" lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="43" y="463" width="459" height="1" uuid="37fab8cb-629f-47cc-84d2-2647e7ca8972"/>
+				<graphicElement>
+					<pen lineWidth="1.0" lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="43" y="443" width="459" height="1" uuid="8a4b716f-d661-4b36-85bf-41f1a9029c48"/>
+				<graphicElement>
+					<pen lineWidth="1.0" lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<textField pattern="#,##0" isBlankWhenNull="true">
+				<reportElement style="Style1" x="240" y="285" width="51" height="20" uuid="e5812eb8-b5c6-4eae-b5e8-3648d3b73414"/>
+				<textElement textAlignment="Center">
+					<font fontName="TH Sarabun New" size="15"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{document}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Style1" x="291" y="286" width="29" height="20" uuid="b4a8709e-368a-4691-a7b6-4b99698b8d0f"/>
+				<textElement textAlignment="Left">
+					<font fontName="TH Sarabun New" size="15"/>
+				</textElement>
+				<textFieldExpression><![CDATA["ฉบับ)"]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="236" y="299" width="55" height="1" uuid="36548a17-d6a3-475f-9681-58ac19f5d536"/>
+				<graphicElement>
+					<pen lineWidth="1.0" lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement x="62" y="585" width="61" height="20" uuid="22708b4e-b00a-40a4-ae65-9bed04c33c53"/>
+				<textElement>
+					<font fontName="TH Sarabun New" size="15"/>
+				</textElement>
+				<textFieldExpression><![CDATA["ระหว่างเดือน"]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="119" y="584" width="93" height="20" uuid="276b291f-02d9-4276-880d-e252eca39bd1"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="TH Sarabun New" size="15"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{useStartDate}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="213" y="585" width="40" height="20" uuid="f528e691-eb58-44ab-ba3f-e21a2046e61b"/>
+				<textElement>
+					<font fontName="TH Sarabun New" size="15"/>
+				</textElement>
+				<textFieldExpression><![CDATA["ถึงเดือน"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="343" y="585" width="32" height="20" uuid="e8308a11-c375-4667-afa2-14922a13b833"/>
+				<textElement>
+					<font fontName="TH Sarabun New" size="15"/>
+				</textElement>
+				<textFieldExpression><![CDATA["พบว่า"]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="115" y="598" width="95" height="1" uuid="c409eb39-704d-4e94-aa56-da58368d2c35"/>
+				<graphicElement>
+					<pen lineWidth="1.0" lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<textField isBlankWhenNull="true">
+				<reportElement x="249" y="584" width="93" height="20" uuid="8b45a2b7-055a-4acc-9164-3eb27a53b109"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="TH Sarabun New" size="15"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{useEndDate}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="245" y="598" width="95" height="1" uuid="8e668a0f-63b3-4c8b-885d-3aba7a1fbb56"/>
+				<graphicElement>
+					<pen lineWidth="1.0" lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+		</band>
+	</pageHeader>
+</jasperReport>

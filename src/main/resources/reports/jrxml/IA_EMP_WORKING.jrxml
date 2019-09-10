@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.5.1.final using JasperReports Library version 6.5.1  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="IA_EMP_WORKING" pageWidth="595" pageHeight="842" whenNoDataType="AllSectionsNoDetail" columnWidth="460" leftMargin="80" rightMargin="55" topMargin="55" bottomMargin="55" whenResourceMissingType="Empty" isIgnorePagination="true" uuid="e91027f1-a850-41e2-951e-e88ddbbe6d13">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<parameter name="userLogin" class="java.lang.String"/>
+	<parameter name="userName" class="java.lang.String"/>
+	<parameter name="userPosition" class="java.lang.String"/>
+	<parameter name="userOffcode" class="java.lang.String"/>
+	<parameter name="workingDate" class="java.util.Date"/>
+	<parameter name="workingFlag" class="java.lang.String"/>
+	<parameter name="workingDesc" class="java.lang.String"/>
+	<parameter name="workingRemark" class="java.lang.String"/>
+	<parameter name="reimburseExpFlag" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="workingFlag" class="java.lang.String"/>
+	<field name="workingDesc" class="java.lang.String"/>
+	<field name="workingRemark" class="java.lang.String"/>
+	<pageHeader>
+		<band height="731" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="94" width="190" height="22" uuid="97980d75-769b-4817-af88-5f38b111f9a6"/>
+				<textElement textAlignment="Left" verticalAlignment="Bottom">
+					<font fontName="TH Sarabun New" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA["จังหวัด , เขต,กอง สำนักงานสรรพสามิตพื้นที่  "]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="25" width="460" height="25" uuid="77975ab1-cab2-452f-95e3-1abd5d5b1453"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="TH Sarabun New" size="18" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["รายงานไปตรวจราชการของเจ้าพนักงานสรรพสามิต"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="380" y="0" width="80" height="25" uuid="c4073796-9b37-4869-a025-9505d4cb7293"/>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font fontName="TH Sarabun New" size="18" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["ส.ส. ๒/๑"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="150" y="50" width="59" height="22" uuid="613c5bde-43ea-4adb-9fe8-06b49edf07ce"/>
+				<textElement textAlignment="Left" verticalAlignment="Bottom">
+					<font fontName="TH Sarabun New" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA["ประจำเดือน"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="72" width="68" height="22" uuid="663dbb02-daec-4bf4-91f1-77747fcdc9d9"/>
+				<textElement textAlignment="Left" verticalAlignment="Bottom">
+					<font fontName="TH Sarabun New" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA["ชื่อผู้ปฏิบัติงาน "]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="340" y="138" width="120" height="22" uuid="cf29a7c5-c006-4ca3-9748-01155d37b0d8"/>
+				<box>
+					<pen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Left">
+					<font fontName="TH Sarabun New" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" "+$F{workingRemark}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="116" width="40" height="22" uuid="a772732d-a4d2-4ce0-be0b-4e782c7258b8"/>
+				<box>
+					<pen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="TH Sarabun New" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA["วันที่"]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="0" y="138" width="40" height="22" uuid="d54d1a62-24a9-4085-82e9-8f8a83314bc1"/>
+				<box>
+					<pen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="TH Sarabun New" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{workingFlag}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="40" y="116" width="300" height="22" uuid="c5faff90-d39a-4fba-89fb-7fe5333ff016"/>
+				<box>
+					<pen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="TH Sarabun New" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA["รายงาน (โดยย่อ) ได้ ไปตรวจหรือทำการอย่างไร ที่ใด"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="340" y="116" width="120" height="22" uuid="97f84201-bde7-4a17-aecb-0196c77310e4"/>
+				<box>
+					<pen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="TH Sarabun New" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA["หมายเหตุ"]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="40" y="138" width="300" height="22" uuid="e97093cd-136e-41c6-b0bf-cf790f382f82"/>
+				<box leftPadding="4">
+					<pen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Left">
+					<font fontName="TH Sarabun New" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" "+$F{workingDesc}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="209" y="50" width="81" height="22" uuid="78bf55ef-2cf5-49b3-b37f-dbf10b4c51ed"/>
+				<textElement textAlignment="Left" verticalAlignment="Bottom">
+					<font fontName="TH Sarabun New" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{workingDate}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="290" y="50" width="27" height="22" uuid="62ac2934-564f-4e2f-b24a-2cf62be79728"/>
+				<textElement textAlignment="Left" verticalAlignment="Bottom">
+					<font fontName="TH Sarabun New" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA["พ.ศ."]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="317" y="50" width="81" height="22" uuid="d2c1c0b3-6f41-4e0e-8a35-91b00ca0f0e0"/>
+				<textElement textAlignment="Left" verticalAlignment="Bottom">
+					<font fontName="TH Sarabun New" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{workingDate}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="68" y="72" width="152" height="22" uuid="b9b20a73-7574-45b3-b2a0-095f7c7eeb17"/>
+				<textElement textAlignment="Left" verticalAlignment="Bottom">
+					<font fontName="TH Sarabun New" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{userName}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="260" y="72" width="179" height="22" uuid="009b5150-2207-4839-86da-c1aead287f6f"/>
+				<textElement textAlignment="Left" verticalAlignment="Bottom">
+					<font fontName="TH Sarabun New" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{userPosition}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="220" y="72" width="40" height="22" uuid="5209eaef-4047-4927-a3a5-341a729e3c9f"/>
+				<textElement textAlignment="Left" verticalAlignment="Bottom">
+					<font fontName="TH Sarabun New" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA["ตำแหน่ง"]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="190" y="94" width="249" height="22" uuid="da1e8d59-989f-42f5-90f9-b9d8e2ff107a"/>
+				<textElement textAlignment="Left" verticalAlignment="Bottom">
+					<font fontName="TH Sarabun New" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{userOffcode}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+</jasperReport>

@@ -1,0 +1,577 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.5.1.final using JasperReports Library version 6.5.1  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="TA_FORM_TS01_14_2" pageWidth="842" pageHeight="595" orientation="Landscape" whenNoDataType="AllSectionsNoDetail" columnWidth="800" leftMargin="20" rightMargin="22" topMargin="20" bottomMargin="20" isIgnorePagination="true" uuid="5e1b95b0-8d12-422e-9432-dad4f5809b33">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.report.description" value=""/>
+	<style name="Topic" vTextAlign="Middle" vImageAlign="Middle" fontName="TH Sarabun New" fontSize="18" isBold="true"/>
+	<style name="TextDetail" hTextAlign="Left" vTextAlign="Bottom" vImageAlign="Middle" rotation="None" fontName="TH Sarabun New" fontSize="14"/>
+	<style name="TextData" hTextAlign="Left" vTextAlign="Bottom" vImageAlign="Middle" rotation="None" fontName="TH Sarabun New" fontSize="13"/>
+	<parameter name="logo" class="java.io.InputStream"/>
+	<parameter name="formTsNumber" class="java.lang.String"/>
+	<parameter name="ownerFullName" class="java.lang.String"/>
+	<parameter name="factoryType" class="java.lang.String"/>
+	<parameter name="factoryName" class="java.lang.String"/>
+	<parameter name="auditDateStart" class="java.util.Date"/>
+	<parameter name="auditDateEnd" class="java.util.Date"/>
+	<parameter name="dutyTypeText" class="java.lang.String"/>
+	<parameter name="newRegId" class="java.lang.String"/>
+	<parameter name="extraAmtDate" class="java.util.Date"/>
+	<parameter name="signOwnerFullName" class="java.lang.String"/>
+	<parameter name="signOfficerFullName" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="recDate" class="java.util.Date"/>
+	<field name="dutyTypeText" class="java.lang.String"/>
+	<field name="valueFromAudit" class="java.math.BigDecimal"/>
+	<field name="taxRate" class="java.math.BigDecimal"/>
+	<field name="auditTaxAmt" class="java.math.BigDecimal"/>
+	<field name="paidTaxAmt" class="java.math.BigDecimal"/>
+	<field name="addTaxAmt" class="java.math.BigDecimal"/>
+	<field name="addFineAmt" class="java.math.BigDecimal"/>
+	<field name="addExtraAmt" class="java.math.BigDecimal"/>
+	<field name="addSumTaxAmt" class="java.math.BigDecimal"/>
+	<field name="addMoiAmt" class="java.math.BigDecimal"/>
+	<field name="addSumAllTaxAmt" class="java.math.BigDecimal"/>
+	<field name="addMonthNum" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<pageHeader>
+		<band height="190" splitType="Stretch">
+			<printWhenExpression><![CDATA[$V{PAGE_NUMBER} == 1]]></printWhenExpression>
+			<image>
+				<reportElement x="350" y="0" width="60" height="60" uuid="ab40de7f-0b1a-47e8-99f5-f784a7f06f9d"/>
+				<imageExpression><![CDATA[$P{logo}]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement style="Topic" x="710" y="35" width="90" height="25" uuid="b443afe6-849e-4ea1-a46b-61720492c35b"/>
+				<textElement textAlignment="Right" verticalAlignment="Bottom"/>
+				<textFieldExpression><![CDATA["ตส. ๐๑-๑๔/๒"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="TextDetail" x="0" y="60" width="200" height="20" uuid="3d2e1d09-864f-4fd0-b565-a3ac72b64488"/>
+				<textElement textAlignment="Left" verticalAlignment="Bottom">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["รายละเอียดแสดงผลการตรวจสอบภาษีสรรพสามิต"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="TextDetail" x="0" y="100" width="80" height="20" uuid="25d5a101-5f44-42bf-9920-169d44454689"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA["ชื่อผู้มีหน้าที่เสียภาษี"]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="TextDetail" x="80" y="100" width="200" height="20" uuid="9a0236fa-8117-4038-96dd-a6802dd36976"/>
+				<box topPadding="0" leftPadding="3" bottomPadding="0" rightPadding="3">
+					<pen lineWidth="1.5" lineStyle="Dotted"/>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{ownerFullName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="320" y="79" width="20" height="22" uuid="a28d8519-24e2-424f-9d71-22cabe84b8c0"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="DejaVu Sans" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA["1".equals( $P{factoryType} )?"\u2611" : "\u2610"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="TextDetail" x="340" y="80" width="70" height="20" uuid="f33e5d49-9e40-4657-9b2b-56dd366424e9"/>
+				<textElement textAlignment="Left" verticalAlignment="Bottom"/>
+				<textFieldExpression><![CDATA["โรงอุตสาหกรรม"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="320" y="99" width="20" height="22" uuid="e5ce9fb9-0ac1-4c63-a4f2-d573a9efcb60"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="DejaVu Sans" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA["2".equals( $P{factoryType} )?"\u2611" : "\u2610"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="TextDetail" x="340" y="100" width="70" height="20" uuid="c28b6fe8-4176-43ac-affb-b6d9e102adc5"/>
+				<textElement textAlignment="Left" verticalAlignment="Bottom"/>
+				<textFieldExpression><![CDATA["สถานบริการ"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="320" y="119" width="20" height="22" uuid="889f3fd5-e0f4-429a-9211-6e09aec4177e"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="DejaVu Sans" size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA["3".equals( $P{factoryType} )?"\u2611" : "\u2610"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="TextDetail" x="340" y="120" width="105" height="20" uuid="52d43807-4fcd-448a-bf72-4d48f01d8dde"/>
+				<textElement textAlignment="Left" verticalAlignment="Bottom"/>
+				<textFieldExpression><![CDATA["สถานประกอบการผู้นำเข้า"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="TextDetail" x="460" y="100" width="15" height="20" uuid="641105fa-e971-4f53-a322-eea3bb658509"/>
+				<textElement textAlignment="Left" verticalAlignment="Bottom"/>
+				<textFieldExpression><![CDATA["ชื่อ"]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="TextDetail" x="475" y="100" width="185" height="20" uuid="9520502d-fabf-447d-900b-eb24729e1af7"/>
+				<box topPadding="0" leftPadding="3" bottomPadding="0" rightPadding="3">
+					<pen lineWidth="1.5" lineStyle="Dotted"/>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{factoryName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="TextDetail" x="0" y="140" width="140" height="20" uuid="19801433-b2ae-4aaf-af49-4df6ca52bd37"/>
+				<textElement textAlignment="Left" verticalAlignment="Bottom"/>
+				<textFieldExpression><![CDATA["รอบระยะเวลาที่ตรวจสอบภาษีตั้งแต่"]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="TextDetail" x="140" y="140" width="220" height="20" uuid="62fd7310-2f98-496f-9607-58ed96597f31"/>
+				<box topPadding="0" leftPadding="3" bottomPadding="0" rightPadding="3">
+					<pen lineWidth="1.5" lineStyle="Dotted"/>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[($P{auditDateStart} != null ? new SimpleDateFormat("d MMM yyyy",new Locale("th", "TH")).format($P{auditDateStart}) : "") + 
+					($P{auditDateEnd} != null ? "  ถึง  " + new SimpleDateFormat("d MMM yyyy",new Locale("th", "TH")).format($P{auditDateEnd}) : "")]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="TextDetail" x="360" y="140" width="85" height="20" uuid="0ff84b24-9128-48c9-b49f-0e0d30461b75"/>
+				<textElement textAlignment="Left" verticalAlignment="Bottom"/>
+				<textFieldExpression><![CDATA["ประเภทสินค้า/บริการ"]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="TextDetail" x="445" y="140" width="215" height="20" uuid="ecd7386e-f87f-46f9-9cfc-7c3f6997f036"/>
+				<box topPadding="0" leftPadding="3" bottomPadding="0" rightPadding="3">
+					<pen lineWidth="1.5" lineStyle="Dotted"/>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{dutyTypeText}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="TextDetail" x="0" y="160" width="100" height="20" uuid="01d9ceb3-0a2b-44f6-be3e-91413ad956ed"/>
+				<textElement textAlignment="Left" verticalAlignment="Bottom"/>
+				<textFieldExpression><![CDATA["ทะเบียนสรรพสามิตเลขที่"]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="TextDetail" x="100" y="160" width="150" height="20" uuid="ed79985b-ba80-4a1d-9ea5-7d1696c77626"/>
+				<box topPadding="0" leftPadding="3" bottomPadding="0" rightPadding="3">
+					<pen lineWidth="1.5" lineStyle="Dotted"/>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{newRegId}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="80" y="114" width="200" height="1" uuid="9fccdd23-31b0-4327-96ee-3aebe5bd0cdb"/>
+				<graphicElement>
+					<pen lineWidth="1.0" lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="140" y="155" width="220" height="1" uuid="7d64b81a-9379-4b60-915b-9c500dbe2780"/>
+				<graphicElement>
+					<pen lineWidth="1.0" lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="446" y="155" width="215" height="1" uuid="7c4664a4-3984-43a1-9a00-292ac1a47f23"/>
+				<graphicElement>
+					<pen lineWidth="1.0" lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="475" y="114" width="185" height="1" uuid="32ed82ed-9a72-45b2-9a00-37e90e13b6de"/>
+				<graphicElement>
+					<pen lineWidth="1.0" lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="101" y="174" width="150" height="1" uuid="0110e29a-beb2-4fe9-8ea3-cf070a8f8300"/>
+				<graphicElement>
+					<pen lineWidth="1.0" lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="80" splitType="Stretch">
+			<textField>
+				<reportElement style="TextData" x="0" y="0" width="50" height="80" uuid="d2290efc-05cf-45cd-93f2-3216ba248d97"/>
+				<box>
+					<pen lineWidth="0.25" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Top"/>
+				<textFieldExpression><![CDATA["วัน/เดือน/ปี"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="TextData" x="50" y="0" width="40" height="80" uuid="877259cb-eb9f-4c07-987f-e1ab2611ec06"/>
+				<box>
+					<pen lineWidth="0.25" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Top"/>
+				<textFieldExpression><![CDATA["พิกัด\nประเภท\nที่"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="TextData" x="90" y="0" width="60" height="80" uuid="67f4938a-dcc0-4cfb-9a0e-a9c56034ca0e"/>
+				<box>
+					<pen lineWidth="0.25" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Top"/>
+				<textFieldExpression><![CDATA["มูลค่าจากการ\nตรวจสอบ"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="TextData" x="150" y="0" width="50" height="80" uuid="710872bb-88ae-4de8-9661-5bc0518893ea"/>
+				<box>
+					<pen lineWidth="0.25" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Top"/>
+				<textFieldExpression><![CDATA["อัตราภาษี"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="TextData" x="200" y="0" width="100" height="80" uuid="871fa8e3-0ec4-47f0-a867-28ad6df8ea03"/>
+				<box>
+					<pen lineWidth="0.25" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Top"/>
+				<textFieldExpression><![CDATA["ภาษีสรรพสามิตที่ต้อง\nชำระตามการตรวจสอบ"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="TextData" x="300" y="0" width="80" height="80" uuid="d629ae1c-f659-40d7-b685-64ccc9739da5"/>
+				<box>
+					<pen lineWidth="0.25" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Top"/>
+				<textFieldExpression><![CDATA["ภาษีที่ชำระไว้แล้ว"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="TextData" x="380" y="0" width="360" height="20" uuid="d9f7a072-1c3c-4bb6-b6d0-e75fb4031490"/>
+				<box>
+					<pen lineWidth="0.25" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Top"/>
+				<textFieldExpression><![CDATA["ภาษีที่ต้องชำระเพิ่มเติม"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="TextData" x="380" y="20" width="60" height="60" uuid="3f5331ce-7cbc-4fe7-bae6-04df5b9b64b2"/>
+				<box>
+					<pen lineWidth="0.25" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Top"/>
+				<textFieldExpression><![CDATA["ภาษี"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="TextData" x="440" y="20" width="60" height="60" uuid="f87615fe-4a0d-49e5-b24b-173d19ed074e"/>
+				<box>
+					<pen lineWidth="0.25" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Top"/>
+				<textFieldExpression><![CDATA["เบี้ยปรับ\nตาม ม.140"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="TextData" x="500" y="20" width="50" height="60" uuid="9da888a1-f341-4e38-957c-915e56d8ffb4"/>
+				<box>
+					<pen lineWidth="0.25" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Top"/>
+				<textFieldExpression><![CDATA["เงินเพิ่ม\nตาม ม.141"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="TextData" x="550" y="20" width="50" height="60" uuid="f8334df3-ae88-4340-a912-28a81ae243d2"/>
+				<box>
+					<pen lineWidth="0.25" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Top"/>
+				<textFieldExpression><![CDATA["รวมเงิน"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="TextData" x="600" y="20" width="80" height="60" uuid="94f87f2c-7d22-434c-b30c-9fed7de0a00f"/>
+				<box>
+					<pen lineWidth="0.25" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Top"/>
+				<textFieldExpression><![CDATA["ภาษีเพื่อราชการ\nส่วนท้องถิ่น\nตาม ม.150"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="TextData" x="680" y="20" width="60" height="60" uuid="57693437-b13f-439a-9164-db97dc5e09a7"/>
+				<box>
+					<pen lineWidth="0.25" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Top"/>
+				<textFieldExpression><![CDATA["รวมเงิน\nภาษีทั้งสิ้น"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="TextData" x="740" y="0" width="60" height="80" uuid="c55d2bb5-7fb3-4117-8ae5-71451495843a"/>
+				<box>
+					<pen lineWidth="0.25" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Top"/>
+				<textFieldExpression><![CDATA["จำนวน\nเดือนที่\nคิดเงินเพิ่ม"]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="TextData" stretchType="ContainerHeight" x="0" y="0" width="50" height="20" uuid="462418cc-2cd8-4a32-80f1-5a0367c2b61c"/>
+				<box leftPadding="3" rightPadding="3">
+					<pen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Top"/>
+				<textFieldExpression><![CDATA[$F{recDate} != null ? new SimpleDateFormat("d MMM yyyy",new Locale("th", "TH")).format($F{recDate}) : ""]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="TextData" stretchType="ContainerHeight" x="50" y="0" width="40" height="20" uuid="814789b8-dba7-4972-a330-682f9c78b906"/>
+				<box leftPadding="3" rightPadding="3">
+					<pen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Top"/>
+				<textFieldExpression><![CDATA[$F{dutyTypeText}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="#,##0.00" isBlankWhenNull="true">
+				<reportElement style="TextData" stretchType="ContainerHeight" x="90" y="0" width="60" height="20" uuid="032ffd3d-c775-4e8e-9f1e-f8974b21cf22"/>
+				<box leftPadding="3" rightPadding="3">
+					<pen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Top"/>
+				<textFieldExpression><![CDATA[$F{valueFromAudit}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="#,##0.00" isBlankWhenNull="true">
+				<reportElement style="TextData" stretchType="ContainerHeight" x="150" y="0" width="50" height="20" uuid="38fbcd9d-2574-4b9f-a503-190a38e0f94b"/>
+				<box leftPadding="3" rightPadding="3">
+					<pen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Top"/>
+				<textFieldExpression><![CDATA[$F{taxRate}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="#,##0.00" isBlankWhenNull="true">
+				<reportElement style="TextData" stretchType="ContainerHeight" x="200" y="0" width="100" height="20" uuid="08500f51-a8ab-477e-9a79-77fa1cdf073b"/>
+				<box leftPadding="3" rightPadding="3">
+					<pen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Top"/>
+				<textFieldExpression><![CDATA[$F{auditTaxAmt}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="#,##0.00" isBlankWhenNull="true">
+				<reportElement style="TextData" stretchType="ContainerHeight" x="300" y="0" width="80" height="20" uuid="7be6a443-60b1-4d29-9615-411717fafce9"/>
+				<box leftPadding="3" rightPadding="3">
+					<pen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Top"/>
+				<textFieldExpression><![CDATA[$F{paidTaxAmt}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="#,##0.00" isBlankWhenNull="true">
+				<reportElement style="TextData" stretchType="ContainerHeight" x="380" y="0" width="60" height="20" uuid="26091c4d-6302-4566-ac10-d57314864a69"/>
+				<box leftPadding="3" rightPadding="3">
+					<pen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Top"/>
+				<textFieldExpression><![CDATA[$F{addTaxAmt}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="#,##0.00" isBlankWhenNull="true">
+				<reportElement style="TextData" stretchType="ContainerHeight" x="440" y="0" width="60" height="20" uuid="706fc530-bb18-4726-b3b6-60ba9f5cc680"/>
+				<box leftPadding="3" rightPadding="3">
+					<pen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Top"/>
+				<textFieldExpression><![CDATA[$F{addFineAmt}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="#,##0.00" isBlankWhenNull="true">
+				<reportElement style="TextData" stretchType="ContainerHeight" x="500" y="0" width="50" height="20" uuid="20b32900-63c8-4e56-bf8f-c7d6d2775fd3"/>
+				<box leftPadding="3" rightPadding="3">
+					<pen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Top"/>
+				<textFieldExpression><![CDATA[$F{addExtraAmt}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="#,##0.00" isBlankWhenNull="true">
+				<reportElement style="TextData" stretchType="ContainerHeight" x="550" y="0" width="50" height="20" uuid="7831ac3b-14f2-4a74-8c3e-b3a8b5290699"/>
+				<box leftPadding="3" rightPadding="3">
+					<pen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Top"/>
+				<textFieldExpression><![CDATA[$F{addSumTaxAmt}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="#,##0.00" isBlankWhenNull="true">
+				<reportElement style="TextData" stretchType="ContainerBottom" x="600" y="0" width="80" height="20" uuid="c360a90a-eace-449f-9ed0-8a50db0fd584"/>
+				<box leftPadding="3" rightPadding="3">
+					<pen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Top"/>
+				<textFieldExpression><![CDATA[$F{addMoiAmt}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="#,##0.00" isBlankWhenNull="true">
+				<reportElement style="TextData" stretchType="ContainerHeight" x="680" y="0" width="60" height="20" uuid="a4758853-64d8-4bb5-a614-36235c40cb31"/>
+				<box leftPadding="3" rightPadding="3">
+					<pen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Top"/>
+				<textFieldExpression><![CDATA[$F{addSumAllTaxAmt}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="TextData" stretchType="ContainerHeight" x="740" y="0" width="60" height="20" uuid="695fbe97-b755-47db-9de4-bcb1a8af657a"/>
+				<box leftPadding="3" rightPadding="3">
+					<pen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Top"/>
+				<textFieldExpression><![CDATA[$F{addMonthNum}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="15">
+			<textField isBlankWhenNull="true">
+				<reportElement key="" style="TextDetail" x="0" y="0" width="150" height="15" uuid="3044067a-46bc-4652-900a-5b5b4a05c347">
+					<printWhenExpression><![CDATA[!($P{formTsNumber} == null || $P{formTsNumber}.length() == 0)]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Bottom">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA["เลขที่เอกสารจากระบบ  "+$P{formTsNumber}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="110" splitType="Stretch">
+			<textField>
+				<reportElement style="TextDetail" x="0" y="10" width="126" height="20" uuid="4a3f25ca-567e-448d-a0dc-7a91e655c4f0"/>
+				<textElement textAlignment="Left" verticalAlignment="Bottom"/>
+				<textFieldExpression><![CDATA["หมายเหตุ เงินเพิ่มคำนวณถึงวันที่"]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="TextDetail" x="126" y="10" width="24" height="20" uuid="3d168c4a-935c-4688-9b9e-a759437b5a74"/>
+				<textElement textAlignment="Center" verticalAlignment="Bottom"/>
+				<textFieldExpression><![CDATA[$P{extraAmtDate} != null ? new SimpleDateFormat("d",new Locale("th", "TH")).format($P{extraAmtDate}) : ""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="TextDetail" x="150" y="10" width="25" height="20" uuid="a870ac42-79c8-418a-9ad5-2090dcea72de"/>
+				<textElement textAlignment="Left" verticalAlignment="Bottom"/>
+				<textFieldExpression><![CDATA["เดือน"]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="TextDetail" x="175" y="10" width="60" height="20" uuid="9de26eb4-60df-4b6d-bb54-5844a003f4c4"/>
+				<textElement textAlignment="Center" verticalAlignment="Bottom"/>
+				<textFieldExpression><![CDATA[$P{extraAmtDate} != null ? new SimpleDateFormat("MMM",new Locale("th", "TH")).format($P{extraAmtDate}) : ""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="TextDetail" x="235" y="10" width="25" height="20" uuid="39206770-285c-42ba-a585-1ec01cf817ad"/>
+				<textElement textAlignment="Left" verticalAlignment="Bottom"/>
+				<textFieldExpression><![CDATA["พ.ศ."]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="TextDetail" x="260" y="10" width="40" height="20" uuid="bf0413a9-f758-4a3b-b73e-e03275d34350"/>
+				<textElement textAlignment="Center" verticalAlignment="Bottom"/>
+				<textFieldExpression><![CDATA[$P{extraAmtDate} != null ? new SimpleDateFormat("yyyy",new Locale("th", "TH")).format($P{extraAmtDate}) : ""]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="TextDetail" x="530" y="30" width="30" height="20" uuid="51a0d5bf-6470-43ba-a6b9-73cf51996db8"/>
+				<textElement textAlignment="Right" verticalAlignment="Bottom"/>
+				<textFieldExpression><![CDATA["ลงชื่อ"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="TextDetail" x="680" y="30" width="70" height="20" uuid="48550ca2-f200-4821-9724-9463f39f3c46"/>
+				<textElement textAlignment="Left" verticalAlignment="Bottom"/>
+				<textFieldExpression><![CDATA["ผู้มีหน้าที่เสียภาษี"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="TextDetail" x="553" y="50" width="7" height="20" uuid="9a0ea21d-a3bb-47c7-a506-6702a02edd44"/>
+				<textElement textAlignment="Right" verticalAlignment="Bottom"/>
+				<textFieldExpression><![CDATA["("]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="TextDetail" x="560" y="50" width="120" height="20" uuid="2679cab1-d6e8-4c7c-aaf6-8ff0ffee91eb"/>
+				<textElement textAlignment="Center" verticalAlignment="Bottom"/>
+				<textFieldExpression><![CDATA[$P{signOwnerFullName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="TextDetail" x="680" y="50" width="7" height="20" uuid="a32ae35b-72c6-430c-8db6-528c08e03558"/>
+				<textElement textAlignment="Left" verticalAlignment="Bottom"/>
+				<textFieldExpression><![CDATA[")"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="TextDetail" x="530" y="70" width="30" height="20" uuid="f0ce5f93-3a10-4f02-bb68-67ce356e6ae1"/>
+				<textElement textAlignment="Right" verticalAlignment="Bottom"/>
+				<textFieldExpression><![CDATA["ลงชื่อ"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="TextDetail" x="680" y="70" width="50" height="20" uuid="71a603a6-0e3c-4cf1-994a-f0c855e452f5"/>
+				<textElement textAlignment="Left" verticalAlignment="Bottom"/>
+				<textFieldExpression><![CDATA["ผู้ตรวจสอบ"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="TextDetail" x="553" y="90" width="7" height="20" uuid="fb036018-7da3-4fb8-841e-b93edc80ea62"/>
+				<textElement textAlignment="Right" verticalAlignment="Bottom"/>
+				<textFieldExpression><![CDATA["("]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="TextDetail" x="560" y="90" width="120" height="20" uuid="06e8e352-ace8-43a8-938c-cca9bfa9e9f4"/>
+				<textElement textAlignment="Center" verticalAlignment="Bottom"/>
+				<textFieldExpression><![CDATA[$P{signOfficerFullName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="TextDetail" x="680" y="90" width="7" height="20" uuid="c805b10f-213e-4556-b7ce-18aa5c0a2a18"/>
+				<textElement textAlignment="Left" verticalAlignment="Bottom"/>
+				<textFieldExpression><![CDATA[")"]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="260" y="24" width="40" height="1" uuid="f6cc9b1d-8066-4b55-bb15-1238bcb34517"/>
+				<graphicElement>
+					<pen lineWidth="1.0" lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="175" y="24" width="60" height="1" uuid="7fe457d5-4756-40d2-9868-132ea2621987"/>
+				<graphicElement>
+					<pen lineWidth="1.0" lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="126" y="24" width="24" height="1" uuid="78543554-0286-4440-a37a-23c65b3365bc"/>
+				<graphicElement>
+					<pen lineWidth="1.0" lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="560" y="44" width="120" height="1" uuid="be11b2bf-e923-45fc-9afb-711f5d5e4b0b"/>
+				<graphicElement>
+					<pen lineWidth="1.0" lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="560" y="64" width="120" height="1" uuid="0b5150db-7e62-4139-8f7f-7d21d24b815f"/>
+				<graphicElement>
+					<pen lineWidth="1.0" lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="560" y="84" width="120" height="1" uuid="8ef87c27-523a-4a16-83f6-516b27b6d5fc"/>
+				<graphicElement>
+					<pen lineWidth="1.0" lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="560" y="104" width="120" height="1" uuid="5f0c7549-7cc5-4a52-84a5-cbbad4e68cfe"/>
+				<graphicElement>
+					<pen lineWidth="1.0" lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+		</band>
+	</summary>
+</jasperReport>

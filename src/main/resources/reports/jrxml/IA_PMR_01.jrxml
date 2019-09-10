@@ -1,0 +1,524 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.5.1.final using JasperReports Library version 6.5.1  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="IA_PMR_01" pageWidth="595" pageHeight="842" whenNoDataType="AllSectionsNoDetail" columnWidth="500" leftMargin="41" rightMargin="54" topMargin="51" bottomMargin="25" uuid="4074e106-b4cb-42de-ab9d-e99f4d4f7cfc">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<property name="com.jaspersoft.studio.unit." value="cm"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="cm"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="cm"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="cm"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="cm"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="cm"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="cm"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="cm"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="cm"/>
+	<style name="Topic" vTextAlign="Middle" vImageAlign="Middle" fontName="TH Sarabun New" fontSize="16" isBold="true"/>
+	<style name="TextDetail" hTextAlign="Left" hImageAlign="Center" vTextAlign="Middle" vImageAlign="Middle" fontName="TH Sarabun New" fontSize="16"/>
+	<parameter name="formNumber" class="java.lang.String"/>
+	<parameter name="budgetYear" class="java.lang.String"/>
+	<parameter name="officeCode" class="java.lang.String"/>
+	<parameter name="auditDate" class="java.lang.String"/>
+	<parameter name="depAuditingSuggestion" class="java.lang.String"/>
+	<parameter name="auditSummary" class="java.lang.String"/>
+	<parameter name="auditSuggestion" class="java.lang.String"/>
+	<parameter name="personAudity" class="java.lang.String"/>
+	<parameter name="auditer1" class="java.lang.String"/>
+	<parameter name="auditer2" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="topic" class="java.lang.String"/>
+	<field name="result" class="java.lang.String"/>
+	<field name="result2" class="java.lang.String"/>
+	<field name="evident" class="java.lang.String"/>
+	<field name="suggestion" class="java.lang.String"/>
+	<field name="type" class="java.lang.String"/>
+	<title>
+		<band height="109">
+			<textField>
+				<reportElement style="Topic" isPrintRepeatedValues="false" x="0" y="25" width="500" height="25" uuid="ff6c4e91-edf3-482d-896d-41fe9bc84a27"/>
+				<textElement textAlignment="Center" verticalAlignment="Bottom"/>
+				<textFieldExpression><![CDATA["สรุปผลการสอบทานการประเมินการจัดวางระบบและการควบคุมภายในประจำปีงบประมาณ  "+$P{budgetYear}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Topic" isPrintRepeatedValues="false" x="0" y="0" width="500" height="25" uuid="e61724ed-8c1d-4a38-a5c5-b2e6bf2ea9a2"/>
+				<textElement textAlignment="Center" verticalAlignment="Bottom"/>
+				<textFieldExpression><![CDATA["กระดาษทำการ"]]></textFieldExpression>
+			</textField>
+			<frame>
+				<reportElement x="0" y="62" width="500" height="22" uuid="e01e0885-b1ba-4124-b1c6-aa04e08d1ead"/>
+				<box>
+					<pen lineWidth="0.5"/>
+				</box>
+				<textField>
+					<reportElement style="TextDetail" stretchType="RelativeToTallestObject" x="3" y="0" width="90" height="22" uuid="ec0bf894-e8c6-4599-9f3d-894bf3ca13c3"/>
+					<box>
+						<pen lineWidth="0.5"/>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Left"/>
+					<textFieldExpression><![CDATA["หน่วยงานรับตรวจ :"]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement style="TextDetail" x="88" y="0" width="168" height="22" uuid="3aab032e-2230-4bd8-a6e8-7f8d59d4ce10"/>
+					<box leftPadding="2">
+						<pen lineWidth="0.5"/>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Left"/>
+					<textFieldExpression><![CDATA[$P{officeCode}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="TextDetail" x="254" y="0" width="60" height="22" uuid="fab35e12-1e51-4425-93d9-206c4cd4e6cb"/>
+					<box>
+						<pen lineWidth="0.5"/>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Left"/>
+					<textFieldExpression><![CDATA["วันที่ตรวจ :"]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement style="TextDetail" x="305" y="0" width="184" height="22" uuid="a27b61d2-d18a-4c6c-acc8-4b83079e44e3"/>
+					<box leftPadding="2">
+						<pen lineWidth="0.5"/>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Left"/>
+					<textFieldExpression><![CDATA[$P{auditDate}]]></textFieldExpression>
+				</textField>
+			</frame>
+			<textField>
+				<reportElement style="Topic" isPrintRepeatedValues="false" x="0" y="84" width="500" height="25" uuid="fbdeaa05-c1f9-4e15-aa78-205da269b70d"/>
+				<textElement textAlignment="Center" verticalAlignment="Bottom"/>
+				<textFieldExpression><![CDATA["ผลการสอบทานจากการปฏิบัติงาน"]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="22">
+			<textField>
+				<reportElement style="Topic" x="0" y="0" width="240" height="22" uuid="4ecdb811-d28b-4e9f-8c68-aab380bbb146"/>
+				<box>
+					<pen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA["แบบรายการ/แนวทางการประเมิน"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Topic" x="240" y="0" width="259" height="22" uuid="ba2492ef-1bef-44a7-8f62-951289c7e179"/>
+				<box>
+					<pen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA["ผลการสอบทาน/ข้อเสนอแนะ"]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="259" splitType="Stretch">
+			<textField isBlankWhenNull="true">
+				<reportElement style="TextDetail" x="0" y="0" width="240" height="259" uuid="3fcf1579-c034-437e-8c09-3ee888fb3017"/>
+				<box leftPadding="4">
+					<pen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Top">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{topic}]]></textFieldExpression>
+			</textField>
+			<frame>
+				<reportElement x="240" y="0" width="259" height="259" uuid="e252e920-1353-4c03-ba6c-bb5b2e70ecff"/>
+				<box>
+					<pen lineWidth="0.5"/>
+				</box>
+				<textField isBlankWhenNull="true">
+					<reportElement style="TextDetail" x="1" y="0" width="258" height="19" uuid="fae33c07-d688-4014-8e04-580dc457b8fd"/>
+					<box leftPadding="4">
+						<pen lineWidth="0.5"/>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Left" verticalAlignment="Top">
+						<font size="14"/>
+					</textElement>
+					<textFieldExpression><![CDATA["ผลการสอบทาน"]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement style="TextDetail" x="20" y="19" width="90" height="19" uuid="0069fd6d-fe0e-4912-be1f-dd08384b5df2"/>
+					<box leftPadding="4">
+						<pen lineWidth="0.5"/>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Left" verticalAlignment="Top">
+						<font size="14"/>
+					</textElement>
+					<textFieldExpression><![CDATA["PM_ASSESS".equals( $F{type} ) || "PM_PY1".equals( $F{type} )?"เพียงพอ เหมาะสม" : "PM_QT".equals( $F{type} )?"มีการดำเนินการจริง":"PM_PY2".equals( $F{type} )?"กิจกรรมครบ":"มี/ร่วมกันประเมิน"]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement style="TextDetail" x="130" y="19" width="120" height="19" uuid="289c1590-51c4-44c1-81a2-45acce795515"/>
+					<box leftPadding="4">
+						<pen lineWidth="0.5"/>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Left" verticalAlignment="Top">
+						<font size="14"/>
+					</textElement>
+					<textFieldExpression><![CDATA["PM_ASSESS".equals( $F{type} ) || "PM_PY1".equals( $F{type} )?"ไม่เพียงพอ" : "PM_QT".equals( $F{type} )?"ไม่มี/ไม่เพียงพอ":"PM_PY2".equals( $F{type} )?"กิจกรรมครบไม่ครบ":"ไม่มี/ไม่ได้ร่วมกันประเมิน"]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="false">
+					<reportElement style="TextDetail" positionType="Float" x="109" y="19" width="26" height="19" uuid="6a48e7b5-8c50-4caf-8e40-129ef3eeaac8"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="DejaVu Sans" size="14"/>
+					</textElement>
+					<textFieldExpression><![CDATA["N".equals( $F{result} )?"\u2611" : "\u2610"]]></textFieldExpression>
+				</textField>
+				<line>
+					<reportElement x="1" y="13" width="80" height="1" uuid="18766616-0397-431d-98b5-09d1a0e10e98"/>
+					<graphicElement>
+						<pen lineWidth="0.5" lineStyle="Solid"/>
+					</graphicElement>
+				</line>
+				<textField isBlankWhenNull="true">
+					<reportElement style="TextDetail" x="1" y="57" width="258" height="83" uuid="f9ff2add-314e-4281-b059-a93691f99327"/>
+					<box leftPadding="4">
+						<pen lineWidth="0.5"/>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Left" verticalAlignment="Top">
+						<font size="12"/>
+					</textElement>
+					<textFieldExpression><![CDATA["  "+$F{evident}]]></textFieldExpression>
+				</textField>
+				<line>
+					<reportElement x="-1" y="153" width="80" height="1" uuid="d625b036-f32c-455a-b0e7-c69617c58e40"/>
+					<graphicElement>
+						<pen lineWidth="0.5" lineStyle="Solid"/>
+					</graphicElement>
+				</line>
+				<textField isBlankWhenNull="true">
+					<reportElement style="TextDetail" x="0" y="140" width="75" height="19" uuid="f9f219d6-6f1e-4cb3-9fc6-acb09cab8bb8"/>
+					<box leftPadding="4">
+						<pen lineWidth="0.5"/>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Left" verticalAlignment="Top">
+						<font size="14"/>
+					</textElement>
+					<textFieldExpression><![CDATA["ข้อเสนอแนะ"]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement style="TextDetail" x="1" y="159" width="258" height="100" uuid="c4a7013d-4ab6-40cf-94cb-29822cf4b121"/>
+					<box leftPadding="4">
+						<pen lineWidth="0.5"/>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Left" verticalAlignment="Top">
+						<font size="12"/>
+					</textElement>
+					<textFieldExpression><![CDATA["  "+$F{suggestion}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement style="TextDetail" x="21" y="38" width="90" height="19" uuid="67a7c7e7-99f5-4240-ae56-c084d2fb790e">
+						<printWhenExpression><![CDATA[!($F{result2} == null || $F{result2}.length() == 0 || $F{result2} == "")]]></printWhenExpression>
+					</reportElement>
+					<box leftPadding="4">
+						<pen lineWidth="0.5"/>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Left" verticalAlignment="Top">
+						<font size="14"/>
+					</textElement>
+					<textFieldExpression><![CDATA["เพียงพอ เหมาะสม"]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="false">
+					<reportElement style="TextDetail" positionType="Float" x="110" y="38" width="26" height="19" uuid="f09791b6-2457-42c6-a28e-d7c209714885">
+						<printWhenExpression><![CDATA[!($F{result2} == null || $F{result2}.length() == 0 || $F{result2} == "")]]></printWhenExpression>
+					</reportElement>
+					<textElement verticalAlignment="Middle">
+						<font fontName="DejaVu Sans" size="14"/>
+					</textElement>
+					<textFieldExpression><![CDATA["N".equals( $F{result2} )?"\u2611" : "\u2610"]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement style="TextDetail" x="129" y="38" width="130" height="19" uuid="70e19342-c5dc-4fb8-9784-1b298b1022b0">
+						<printWhenExpression><![CDATA[!($F{result2} == null || $F{result2}.length() == 0 || $F{result2} == "")]]></printWhenExpression>
+					</reportElement>
+					<box leftPadding="4">
+						<pen lineWidth="0.5"/>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Left" verticalAlignment="Top">
+						<font size="14"/>
+					</textElement>
+					<textFieldExpression><![CDATA["ไม่เพียงพอ/ไม่บรรลุวัตถุประสงค์"]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="false">
+					<reportElement style="TextDetail" positionType="Float" x="1" y="38" width="20" height="19" uuid="58c049d7-c30c-4af0-9227-c1c6067ef8db">
+						<printWhenExpression><![CDATA[!($F{result2} == null || $F{result2}.length() == 0 || $F{result2} == "")]]></printWhenExpression>
+					</reportElement>
+					<textElement verticalAlignment="Middle">
+						<font fontName="DejaVu Sans" size="14"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Y".equals( $F{result2} )?"\u2611" : "\u2610"]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="false">
+					<reportElement style="TextDetail" positionType="Float" x="1" y="19" width="20" height="19" uuid="254ba0ce-fcf3-415f-8171-6f27525f3234"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="DejaVu Sans" size="14"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Y".equals( $F{result} )?"\u2611" : "\u2610"]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="15">
+			<textField isBlankWhenNull="true">
+				<reportElement key="" style="TextDetail" x="0" y="0" width="150" height="15" uuid="4ae4aee4-02d5-4956-92e6-51ccb7f71052">
+					<printWhenExpression><![CDATA[!($P{formNumber} == null || $P{formNumber}.length() == 0)]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Bottom">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA["เลขที่เอกสารจากระบบ  "+$P{formNumber}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="190" y="0" width="100" height="15" uuid="d31dcf0e-3ba3-4fd8-b0d7-bdc2992d5ae1"/>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font fontName="TH Sarabun New"/>
+				</textElement>
+				<textFieldExpression><![CDATA["หน้าที่  :  "+$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="360">
+			<textField>
+				<reportElement style="TextDetail" x="35" y="232" width="35" height="22" uuid="113d9c65-228f-4de4-9942-f2c1d3770c44"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["(ลงชื่อ)"]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="70" y="248" width="110" height="1" uuid="fd8ad98a-13af-48e0-a035-d2b9e6076153"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement style="TextDetail" x="35" y="10" width="160" height="22" uuid="6b91084a-ab58-447a-a49d-c0ebc59054b7"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["ข้อเสนอแนะของหน่วยรับตรวจ"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="TextDetail" x="35" y="32" width="464" height="52" uuid="d7cba213-a545-4db6-83fd-43b7e434c6dd"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Top">
+					<font isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["   "+$P{depAuditingSuggestion}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="TextDetail" x="35" y="106" width="464" height="52" uuid="bcd142f2-bfd4-4cc8-8a04-0cbacb30aab3"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Top">
+					<font isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["   "+$P{auditSummary}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="TextDetail" x="35" y="84" width="160" height="22" uuid="c7b9b039-a45b-4db6-8766-6ef53d8c229a"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["สรุปผลการตรวจสอบ"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="TextDetail" x="35" y="180" width="464" height="52" uuid="7294f445-261e-46fa-87c2-1f74628f0cf2"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Top">
+					<font isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["   "+$P{auditSuggestion}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="TextDetail" x="35" y="158" width="160" height="22" uuid="49e8f180-7564-4c12-b466-6af47722a46f"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["ข้อเสนอแนะ"]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement style="TextDetail" x="35" y="254" width="145" height="106" uuid="370048ab-c196-4490-b213-4a360cacbb53"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Top"/>
+				<textFieldExpression><![CDATA[$P{personAudity}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="TextDetail" x="190" y="232" width="35" height="22" uuid="6888268a-e5d0-4c6d-8b2d-6a58479e01da"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["(ลงชื่อ)"]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="225" y="248" width="110" height="1" uuid="648edd11-af8e-40ee-ac0a-4a8a1f995390"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<textField isBlankWhenNull="true">
+				<reportElement style="TextDetail" x="190" y="254" width="145" height="106" uuid="d07e9c31-937b-48e3-98de-f5667828130c"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Top"/>
+				<textFieldExpression><![CDATA[$P{auditer1}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="TextDetail" x="344" y="232" width="35" height="22" uuid="b39f81f5-238e-444e-a4e1-f785ecfe0007"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["(ลงชื่อ)"]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="379" y="248" width="110" height="1" uuid="29a0b417-f711-4e2b-92fa-17391261cc43"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<textField isBlankWhenNull="true">
+				<reportElement style="TextDetail" x="344" y="254" width="145" height="106" uuid="89dbbdc2-2855-4b7b-a4e9-b600c9efc352"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Top"/>
+				<textFieldExpression><![CDATA[$P{auditer2}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="35" y="25" width="140" height="1" uuid="1654ba16-4681-44d3-a426-679cd609fde4"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineStyle="Solid"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="35" y="99" width="100" height="1" uuid="cc8d5d12-6fb8-401c-b5f7-c9db7a515e2f"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineStyle="Solid"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="35" y="173" width="70" height="1" uuid="1daa230b-678a-474f-9b8d-2f821615610b"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineStyle="Solid"/>
+				</graphicElement>
+			</line>
+		</band>
+	</summary>
+</jasperReport>

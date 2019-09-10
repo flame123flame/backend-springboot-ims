@@ -1,0 +1,769 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.5.1.final using JasperReports Library version 6.5.1  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="IA_FORM_7131_NO" pageWidth="595" pageHeight="842" columnWidth="460" leftMargin="80" rightMargin="55" topMargin="55" bottomMargin="25" uuid="de1a6809-8b3d-4295-9e46-df5c30d33c72">
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<style name="Topic" hTextAlign="Center" vTextAlign="Middle" fontName="TH Sarabun New" fontSize="16" isBold="true"/>
+	<style name="TextDetail" hTextAlign="Left" pattern="" fontName="TH Sarabun New" fontSize="14"/>
+	<style name="TextDetailBold" pattern="" fontName="TH Sarabun New" fontSize="14" isBold="true"/>
+	<style name="Checkbox" fontName="DejaVu Sans"/>
+	<style name="Topic2" fontName="TH Sarabun New" fontSize="16"/>
+	<style name="TextDetailCenter" hTextAlign="Center" vTextAlign="Top" isBlankWhenNull="true" fontName="TH Sarabun New" fontSize="14"/>
+	<parameter name="name" class="java.lang.String"/>
+	<parameter name="position" class="java.lang.String"/>
+	<parameter name="affiliation" class="java.lang.String"/>
+	<parameter name="self" class="java.lang.Boolean"/>
+	<parameter name="father" class="java.lang.Boolean"/>
+	<parameter name="couple" class="java.lang.Boolean"/>
+	<parameter name="mother" class="java.lang.Boolean"/>
+	<parameter name="child1" class="java.lang.Boolean"/>
+	<parameter name="child2" class="java.lang.Boolean"/>
+	<parameter name="child3" class="java.lang.Boolean"/>
+	<parameter name="coupleName" class="java.lang.String"/>
+	<parameter name="coupleCitizenId" class="java.lang.String"/>
+	<parameter name="fatherName" class="java.lang.String"/>
+	<parameter name="fatherCitizenId" class="java.lang.String"/>
+	<parameter name="motherName" class="java.lang.String"/>
+	<parameter name="motherCitizenId" class="java.lang.String"/>
+	<parameter name="child1Name" class="java.lang.String"/>
+	<parameter name="child1CitizenId" class="java.lang.String"/>
+	<parameter name="birthdate1" class="java.lang.String"/>
+	<parameter name="child1Order" class="java.lang.String"/>
+	<parameter name="child1Status" class="java.lang.String"/>
+	<parameter name="child2Name" class="java.lang.String"/>
+	<parameter name="child2CitizenId" class="java.lang.String"/>
+	<parameter name="birthdate2" class="java.lang.String"/>
+	<parameter name="child2Order" class="java.lang.String"/>
+	<parameter name="child2Status" class="java.lang.String"/>
+	<parameter name="child3Name" class="java.lang.String"/>
+	<parameter name="child3CitizenId" class="java.lang.String"/>
+	<parameter name="birthdate3" class="java.lang.String"/>
+	<parameter name="child3Order" class="java.lang.String"/>
+	<parameter name="child3Status" class="java.lang.String"/>
+	<parameter name="hospitalName" class="java.lang.String"/>
+	<parameter name="hospitalOwner" class="java.lang.String"/>
+	<parameter name="treatedDateFrom" class="java.lang.String"/>
+	<parameter name="treatedDateTo" class="java.lang.String"/>
+	<parameter name="totalMoney" class="java.lang.String"/>
+	<parameter name="totalMoneyText" class="java.lang.String"/>
+	<parameter name="ReceiptQt" class="java.lang.String"/>
+	<parameter name="claimStatus" class="java.lang.String"/>
+	<parameter name="claimMoney" class="java.lang.String"/>
+	<parameter name="claimMoneyText" class="java.lang.String"/>
+	<parameter name="ownerClaim1" class="java.lang.String"/>
+	<parameter name="ownerClaim2" class="java.lang.String"/>
+	<parameter name="ownerClaim3" class="java.lang.String"/>
+	<parameter name="ownerClaim4" class="java.lang.String"/>
+	<parameter name="otherClaim1" class="java.lang.String"/>
+	<parameter name="otherClaim2" class="java.lang.String"/>
+	<parameter name="otherClaim3" class="java.lang.String"/>
+	<parameter name="otherClaim4" class="java.lang.String"/>
+	<parameter name="disease" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<title>
+		<band height="90" splitType="Stretch">
+			<textField>
+				<reportElement key="" style="TextDetailBold" x="400" y="0" width="60" height="30" uuid="b19ef8e1-d472-4740-9b1d-0d0e6e3b2f34"/>
+				<textFieldExpression><![CDATA["แบบ 7131"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Topic" x="122" y="8" width="230" height="30" uuid="d48d2b57-83d4-4743-a920-072aff53e159"/>
+				<textFieldExpression><![CDATA["ใบเบิกสวัสดิการเกี่ยวกับการรักษาพยาบาล"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="TextDetail" x="0" y="39" width="42" height="20" uuid="f83fc2d6-99ca-4f69-aceb-9167206835b8"/>
+				<textFieldExpression><![CDATA["ข้าพเจ้า"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="TextDetail" x="249" y="39" width="40" height="20" uuid="ef0ad869-8353-49e9-91ff-70c9053eef9f"/>
+				<textFieldExpression><![CDATA["ตำแหน่ง"]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement style="TextDetail" x="44" y="39" width="194" height="20" uuid="87daef39-d4ab-4f6f-80fc-1c8f1949ecac"/>
+				<textFieldExpression><![CDATA[$P{name}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="38" y="53" width="200" height="1" uuid="34ef016c-723b-4eb4-b36a-02dad5f346a5"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="38" y="79" width="200" height="1" uuid="da7d54bb-2ce6-4080-a613-44e2ce851079"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<textField isBlankWhenNull="true">
+				<reportElement style="TextDetail" x="297" y="39" width="163" height="20" uuid="4399763c-e887-41a4-aea8-337320b4d30e"/>
+				<textFieldExpression><![CDATA[$P{position}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="290" y="53" width="170" height="1" uuid="c34c7fef-7f49-42ca-a241-f910a1aec4f1"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement style="TextDetail" x="0" y="65" width="40" height="20" uuid="d9230b3f-e37d-4f26-929f-075cacb5c4d6"/>
+				<textFieldExpression><![CDATA["สังกัด"]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement style="TextDetail" x="42" y="65" width="196" height="20" uuid="d91a2e88-9a68-4b21-9c45-b70bf76e70c6"/>
+				<textFieldExpression><![CDATA[$P{affiliation}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="TextDetail" x="-25" y="39" width="20" height="20" uuid="81ff0361-86c2-428f-9231-e23c28be98e8"/>
+				<textFieldExpression><![CDATA["1."]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="659" splitType="Stretch">
+			<textField>
+				<reportElement style="TextDetail" x="0" y="0" width="88" height="20" uuid="8d3fb04e-0aee-415c-968b-38a9cf006ea9"/>
+				<textFieldExpression><![CDATA["ขอเบิกเงินค่ารักษาของ"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="TextDetail" x="-25" y="0" width="20" height="20" uuid="90f8b447-1185-415c-935a-38dcebfd5de2"/>
+				<textFieldExpression><![CDATA["2."]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement key="" style="Checkbox" x="0" y="23" width="30" height="14" uuid="f722c185-6882-40c1-9aa2-fa5b395219b4"/>
+				<textFieldExpression><![CDATA[$P{self}?"\u2611" : "\u2610"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="TextDetail" x="15" y="20" width="35" height="24" uuid="f8c6138d-d47a-4f72-9669-fa69ab7bd1c4"/>
+				<textFieldExpression><![CDATA["ตนเอง"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement key="" style="Checkbox" x="0" y="43" width="30" height="14" uuid="4466f709-5f11-4902-a2de-291e9ad55d58"/>
+				<textFieldExpression><![CDATA[$P{couple}?"\u2611" : "\u2610"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="TextDetail" x="15" y="40" width="35" height="24" uuid="65861ae8-5bd6-4c3a-9c20-48f7453ac949"/>
+				<textFieldExpression><![CDATA["คู่สมรส"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="TextDetail" x="60" y="41" width="20" height="20" uuid="8de94630-aa91-4f56-9a53-3ce045b7a790"/>
+				<textFieldExpression><![CDATA["ชื่อ"]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="77" y="55" width="200" height="1" uuid="32c18911-835c-44ae-9ee0-38b2e7f6d18d"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement style="TextDetail" x="282" y="40" width="90" height="20" uuid="9c4c5ea6-c8a3-4c03-9c32-c151a9069ef2"/>
+				<textFieldExpression><![CDATA["เลขประจำตัวประชาชน"]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="370" y="54" width="90" height="1" uuid="1ce79a52-97b7-4b11-ad8d-5785cc046871"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement key="" style="Checkbox" x="0" y="63" width="30" height="14" uuid="96b2085b-68d2-4c5c-8feb-ca41a2bb03d6"/>
+				<textFieldExpression><![CDATA[$P{father}?"\u2611" : "\u2610"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="TextDetail" x="15" y="60" width="35" height="24" uuid="35e9bf6a-3d07-4974-afde-492c0cf3a2c5"/>
+				<textFieldExpression><![CDATA["บิดา"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="TextDetail" x="60" y="61" width="20" height="20" uuid="89eee60e-6764-47a0-8e75-41f11b3d106a"/>
+				<textFieldExpression><![CDATA["ชื่อ"]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="77" y="75" width="200" height="1" uuid="a5e7c397-39c2-4332-9e48-188145d56377"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement style="TextDetail" x="282" y="60" width="90" height="20" uuid="5f9955ea-c8c8-4172-9e66-a6bee9984248"/>
+				<textFieldExpression><![CDATA["เลขประจำตัวประชาชน"]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="370" y="74" width="90" height="1" uuid="ed497291-f790-4acf-aca8-ced01c2fc4a3"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement key="" style="Checkbox" x="0" y="83" width="30" height="14" uuid="2488a25a-556c-47ad-980c-9655316065e4"/>
+				<textFieldExpression><![CDATA[$P{mother}?"\u2611" : "\u2610"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="TextDetail" x="15" y="80" width="35" height="24" uuid="8188871a-5794-4ccb-b31b-273837e93c31"/>
+				<textFieldExpression><![CDATA["มารดา"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="TextDetail" x="60" y="81" width="20" height="20" uuid="ae9aefee-121a-4a2a-8c33-58eddf714905"/>
+				<textFieldExpression><![CDATA["ชื่อ"]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="77" y="95" width="200" height="1" uuid="3ddf01a6-5f50-4d19-8dff-0c9bf04a3ff4"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement style="TextDetail" x="282" y="80" width="90" height="20" uuid="23facc42-01ab-40e2-8c1c-a9aefd54523f"/>
+				<textFieldExpression><![CDATA["เลขประจำตัวประชาชน"]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="370" y="94" width="90" height="1" uuid="ee39d02f-d490-416e-aba1-a3a2291fbfc6"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement key="" style="Checkbox" x="0" y="103" width="30" height="14" uuid="a8e7b79d-3667-45a6-833b-9300a4ea7231"/>
+				<textFieldExpression><![CDATA[$P{child1}?"\u2611" : "\u2610"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="TextDetail" x="15" y="100" width="35" height="24" uuid="d0ab198e-e825-4d56-b181-c58c6c52e58d"/>
+				<textFieldExpression><![CDATA["บุตร"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="TextDetail" x="60" y="101" width="20" height="20" uuid="be83a4ec-2a05-4d27-bf74-081e438634fd"/>
+				<textFieldExpression><![CDATA["ชื่อ"]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="77" y="115" width="200" height="1" uuid="be08ea8a-09a1-48b2-9939-f2aa743553a4"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement style="TextDetail" x="282" y="100" width="90" height="20" uuid="e217e37a-353f-44c5-8035-ed7b0edde9cc"/>
+				<textFieldExpression><![CDATA["เลขประจำตัวประชาชน"]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="370" y="114" width="90" height="1" uuid="50c4fe48-d69b-4c35-bd00-f87b2d641a0e"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement style="TextDetail" x="60" y="121" width="40" height="20" uuid="b74f383c-9c0d-41c3-a50f-2b2410ecca02"/>
+				<textFieldExpression><![CDATA["เกิดเมื่อ"]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="95" y="135" width="180" height="1" uuid="871be3cf-c65b-41de-83ae-fed02ac54e87"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement style="TextDetail" x="282" y="120" width="70" height="20" uuid="18112303-eef9-48b9-9c40-52a0e99df0f5"/>
+				<textFieldExpression><![CDATA["เป็นบุตรลำดับที่"]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="348" y="134" width="40" height="1" uuid="0fac4c64-c56b-4c7c-88f0-d25bf63868d7"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement key="" style="Checkbox" x="60" y="144" width="30" height="14" uuid="23f9ba80-4022-43be-8158-38cac8e326e9"/>
+				<textFieldExpression><![CDATA["0".equals($P{child1Status})?"\u2611" : "\u2610"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="TextDetail" x="75" y="141" width="80" height="24" uuid="18fc215c-6b04-4eb9-88a6-e9a7bf7c9f1c"/>
+				<textFieldExpression><![CDATA["ยังไม่บรรลนิติภาวะ"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement key="" style="Checkbox" x="158" y="144" width="30" height="14" uuid="5e97b8af-3cab-4dfb-b960-2338cd126d04"/>
+				<textFieldExpression><![CDATA["1".equals($P{child1Status})?"\u2611" : "\u2610"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="TextDetail" x="173" y="141" width="202" height="24" uuid="9350d48b-65ee-475e-93b7-2e3013fcd83f"/>
+				<textFieldExpression><![CDATA["เป็นบุตรไร้ความสามารถ หรือเสมือนไร้ความสามารถ"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement key="" style="Checkbox" x="0" y="160" width="30" height="14" uuid="2988abd5-e05b-497f-9c75-0b125ca513b2"/>
+				<textFieldExpression><![CDATA[$P{child2}?"\u2611" : "\u2610"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="TextDetail" x="15" y="157" width="35" height="24" uuid="6a300009-0dda-4981-8d44-e5cbd94a2a4c"/>
+				<textFieldExpression><![CDATA["บุตร"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="TextDetail" x="60" y="158" width="20" height="20" uuid="60d60200-cafd-4f35-ae99-81a14709ee0b"/>
+				<textFieldExpression><![CDATA["ชื่อ"]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="77" y="172" width="200" height="1" uuid="04928767-52e8-474b-a6c4-04170675a6f9"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement style="TextDetail" x="282" y="157" width="90" height="20" uuid="19ebb9d1-1c85-41bc-bcac-5338375c7237"/>
+				<textFieldExpression><![CDATA["เลขประจำตัวประชาชน"]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="371" y="171" width="90" height="1" uuid="b98a5889-ea65-4e9f-91e5-307d788b1bdd"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement style="TextDetail" x="60" y="178" width="40" height="20" uuid="f1af5b0b-9fda-4c79-a4d4-65b6347f51a3"/>
+				<textFieldExpression><![CDATA["เกิดเมื่อ"]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="95" y="192" width="180" height="1" uuid="f767ede0-db7a-404c-b516-c5d39379cb2d"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement style="TextDetail" x="282" y="177" width="70" height="20" uuid="c1bb99bf-e291-4850-9980-44efd62fcd95"/>
+				<textFieldExpression><![CDATA["เป็นบุตรลำดับที่"]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="348" y="191" width="40" height="1" uuid="c1e2369d-48e4-40dd-9f52-1bf83a7b2ba4"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement key="" style="Checkbox" x="60" y="201" width="30" height="14" uuid="03b41c72-fdbd-42fe-9e83-50cdf83110b6"/>
+				<textFieldExpression><![CDATA["0".equals($P{child2Status})?"\u2611" : "\u2610"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="TextDetail" x="75" y="198" width="80" height="24" uuid="167865fa-64b5-445a-b908-0147be79151a"/>
+				<textFieldExpression><![CDATA["ยังไม่บรรลนิติภาวะ"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement key="" style="Checkbox" x="158" y="201" width="30" height="14" uuid="e4f35555-583a-4e48-bc00-2499b4961cf4"/>
+				<textFieldExpression><![CDATA["1".equals($P{child2Status})?"\u2611" : "\u2610"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="TextDetail" x="173" y="198" width="202" height="24" uuid="8be652a3-8601-4a93-ae49-041b918fcddf"/>
+				<textFieldExpression><![CDATA["เป็นบุตรไร้ความสามารถ หรือเสมือนไร้ความสามารถ"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement key="" style="Checkbox" x="0" y="217" width="30" height="14" uuid="72366b3d-6ac3-4ca2-ae6f-ee5a579c8e97"/>
+				<textFieldExpression><![CDATA[$P{child2}?"\u2611" : "\u2610"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="TextDetail" x="15" y="214" width="35" height="24" uuid="5caf42ff-6f8e-44fa-9763-3c18650ea07e"/>
+				<textFieldExpression><![CDATA["บุตร"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="TextDetail" x="60" y="215" width="20" height="20" uuid="6f4d76e5-1e29-4554-bfba-9346792990b9"/>
+				<textFieldExpression><![CDATA["ชื่อ"]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="77" y="229" width="200" height="1" uuid="782dbb8a-deee-4f71-8934-4c2a2a7e9993"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement style="TextDetail" x="282" y="214" width="90" height="20" uuid="fbb59cae-54ed-4f3d-8772-c79f85454478"/>
+				<textFieldExpression><![CDATA["เลขประจำตัวประชาชน"]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="370" y="228" width="90" height="1" uuid="8f1c6661-3c8c-44bb-b1ec-4eae8973c93e"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement style="TextDetail" x="60" y="235" width="40" height="20" uuid="3071bf5e-0094-40bc-bf53-b13771f8e093"/>
+				<textFieldExpression><![CDATA["เกิดเมื่อ"]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="95" y="249" width="180" height="1" uuid="56ebea34-a9c9-4a7a-beda-f15ce63a3d11"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement style="TextDetail" x="282" y="234" width="70" height="20" uuid="65780615-2653-4ddf-abff-243927b9674a"/>
+				<textFieldExpression><![CDATA["เป็นบุตรลำดับที่"]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="348" y="248" width="40" height="1" uuid="4b00b696-c8e9-4965-a632-a164684fb05c"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement key="" style="Checkbox" x="60" y="258" width="30" height="14" uuid="57d7b1a1-770c-4adc-857a-bee593fba70b"/>
+				<textFieldExpression><![CDATA["0".equals($P{child3Status})?"\u2611" : "\u2610"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="TextDetail" x="75" y="255" width="80" height="24" uuid="4d697260-c6df-4b23-85e4-506bfd11948d"/>
+				<textFieldExpression><![CDATA["ยังไม่บรรลนิติภาวะ"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement key="" style="Checkbox" x="158" y="258" width="30" height="14" uuid="3978bef9-ac8d-4237-a023-484f1568325f"/>
+				<textFieldExpression><![CDATA["1".equals($P{child3Status})?"\u2611" : "\u2610"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="TextDetail" x="173" y="255" width="202" height="24" uuid="5baafc1e-f039-4ab8-9707-04a127deeb92"/>
+				<textFieldExpression><![CDATA["เป็นบุตรไร้ความสามารถ หรือเสมือนไร้ความสามารถ"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="TextDetail" x="-10" y="273" width="54" height="21" uuid="e6138e2a-4e5a-48a0-ac3b-ae1a4de3ced9"/>
+				<textFieldExpression><![CDATA["ป่วยเป็นโรค"]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="40" y="286" width="420" height="1" uuid="8417237a-5614-4314-b358-eaa40a6a8725"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="215" y="305" width="245" height="1" uuid="41e6f293-f424-4dd1-aa83-d0349615edd5"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement style="TextDetail" x="-10" y="292" width="230" height="21" uuid="34190945-4623-4f7f-8e50-cd8be2b0f88e"/>
+				<textFieldExpression><![CDATA["และได้เข้ารับการตรวจรักษาพยาบาลจาก (ชื่อสถานพยาบาล)"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="TextDetail" x="-10" y="311" width="100" height="21" uuid="9b0c56ac-80d2-4c7b-b4c6-88ba4477181d"/>
+				<textFieldExpression><![CDATA["ซึ่งเป็นสถานพยาบาลของ"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement key="" style="Checkbox" x="95" y="315" width="30" height="14" uuid="95dad6cc-94a0-4151-a00b-6c2f5c388181"/>
+				<textFieldExpression><![CDATA["GOVERNMENT".equals( $P{hospitalOwner} )?"\u2611" : "\u2610"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="TextDetail" x="110" y="311" width="50" height="24" uuid="a49f4ab1-d34a-459c-916b-806dcce0d5c8"/>
+				<textFieldExpression><![CDATA["ทางราชการ"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement key="" style="Checkbox" x="170" y="315" width="30" height="14" uuid="1569eac4-c2fe-4246-b533-2f0db9c5c053"/>
+				<textFieldExpression><![CDATA["INDIVIDUAL".equals( $P{hospitalOwner} )?"\u2611" : "\u2610"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="TextDetail" x="185" y="311" width="35" height="24" uuid="c589aa3d-88d9-4a73-9af3-f88b5335d375"/>
+				<textFieldExpression><![CDATA["เอกชน"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="TextDetail" x="225" y="311" width="52" height="21" uuid="09647501-f646-4563-abb4-0ca1e89ee8f7"/>
+				<textFieldExpression><![CDATA["ตั้งแต่วันที่"]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="270" y="324" width="155" height="1" uuid="7bffd859-48da-4694-9ff0-ba714f34da0b"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement style="TextDetail" x="427" y="311" width="33" height="21" uuid="ff937acb-de9b-46fb-ad32-17cd1bc88397"/>
+				<textFieldExpression><![CDATA["ถึงวันที่"]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="-8" y="345" width="155" height="1" uuid="311477a5-d2e3-4785-ab48-2da7b2511dc0"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement style="TextDetail" x="149" y="330" width="60" height="21" uuid="541f7188-579f-43e2-b0f5-4ab6a832bd9a"/>
+				<textFieldExpression><![CDATA["เป็นเงินทั้งสิ้น"]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="200" y="345" width="235" height="1" uuid="a0067f00-1271-4dc6-be33-f21a7315b40f"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement style="TextDetail" x="436" y="331" width="23" height="21" uuid="7cd95d59-b9c8-4a80-9d4a-672685474687"/>
+				<textFieldExpression><![CDATA["บาท"]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="381" y="363" width="53" height="1" uuid="f630ca01-dded-4045-9209-60b89e9fbcc7"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement style="TextDetail" x="436" y="350" width="23" height="21" uuid="01de0dd7-be53-4e7c-bc02-0c0406d8a9b3"/>
+				<textFieldExpression><![CDATA["ฉบับ"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="TextDetail" x="260" y="350" width="126" height="21" uuid="2bb38402-ee2f-46af-9206-737e78f80157"/>
+				<textFieldExpression><![CDATA["ตามใบเสร็จรับเงินที่แนบ จำนวน"]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="-3" y="363" width="250" height="1" uuid="a6e9d5e0-3a4b-44ef-9a6b-f1e430837c75"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement style="TextDetailBold" x="-9" y="351" width="9" height="20" uuid="55413eaf-9161-46d0-b685-008d08384115"/>
+				<textFieldExpression><![CDATA["("]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="TextDetailBold" x="249" y="351" width="9" height="20" uuid="afb24118-9f65-4ef8-8610-8e97c7983391"/>
+				<textFieldExpression><![CDATA[")"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="TextDetail" x="-25" y="371" width="20" height="20" uuid="b03d1a38-2e4d-437e-a872-f1077d3d8e79"/>
+				<textFieldExpression><![CDATA["3."]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="TextDetail" x="0" y="371" width="384" height="21" uuid="d25abeee-dfcf-4fdf-b02e-d7ff538754ac"/>
+				<textFieldExpression><![CDATA["ข้าพเจ้ามีสิทธิได้รับเงินค่ารักษาพยาบาล ตามพระราชกฤษฎีกาเงินสวัสดิการเกี่ยวกับการรักษาพยาบาล"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="TextDetail" x="15" y="392" width="35" height="24" uuid="d2655fcd-7c28-4559-b5ab-c8abf9b647ed"/>
+				<textFieldExpression><![CDATA["ตามสิทธิ"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement key="" style="Checkbox" x="0" y="395" width="30" height="14" uuid="a7706e9c-4049-4ee5-9224-daf5d022c558"/>
+				<textFieldExpression><![CDATA["0".equals( $P{claimStatus} )?"\u2611" : "\u2610"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="TextDetail" x="80" y="392" width="201" height="24" uuid="df312fc0-9c06-47bb-82ee-243775a28538"/>
+				<textFieldExpression><![CDATA["เฉพาะส่วนที่ขาดอยู่จากสิทธิที่ได้รับจากหน่วยงานอื่น"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement key="" style="Checkbox" x="65" y="395" width="30" height="14" uuid="270de288-b200-4717-b27e-69234e9bbaf2"/>
+				<textFieldExpression><![CDATA["1".equals( $P{claimStatus} )?"\u2611" : "\u2610"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="TextDetail" x="80" y="412" width="157" height="24" uuid="f05a86f4-2665-4baa-b6bc-f009f730f450"/>
+				<textFieldExpression><![CDATA["เฉพาะส่วนที่ขาดอยู่จากสัญญาประกันภัย"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement key="" style="Checkbox" x="65" y="415" width="30" height="14" uuid="e4776d83-19ff-4006-94a6-bcd948e1b3c9"/>
+				<textFieldExpression><![CDATA["2".equals( $P{claimStatus} )?"\u2611" : "\u2610"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="TextDetail" x="-9" y="435" width="38" height="21" uuid="83b55fe4-b072-4e47-834a-0c740d59fd5c"/>
+				<textFieldExpression><![CDATA["เป็นเงิน"]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="23" y="450" width="100" height="1" uuid="e3e30f29-ffcf-427d-bd02-ed4e7ed8039b"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement style="TextDetail" x="122" y="436" width="23" height="21" uuid="2ba759ac-ff7c-4e46-8f44-c69784ab416e"/>
+				<textFieldExpression><![CDATA["บาท"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="TextDetailBold" x="145" y="438" width="9" height="20" uuid="e771f5ac-e840-480f-be5a-ec0ceb2821f6"/>
+				<textFieldExpression><![CDATA["("]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="150" y="450" width="275" height="1" uuid="7b48fc6b-3fb7-41f4-84ba-fed22820e771"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineStyle="Dotted"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement style="TextDetailBold" x="425" y="438" width="9" height="20" uuid="65b890e5-4d66-405a-85a4-a31fc1db5b96"/>
+				<textFieldExpression><![CDATA[")"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="TextDetail" x="435" y="437" width="23" height="21" uuid="46637b2d-cf48-456c-8093-de3d0a264e22"/>
+				<textFieldExpression><![CDATA["และ"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="TextDetail" x="0" y="456" width="50" height="24" uuid="c43831ae-2ce2-4b30-b51e-d08ff12225a1"/>
+				<textFieldExpression><![CDATA["(1) ข้าพเจ้า"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement key="" style="Checkbox" x="65" y="459" width="30" height="14" uuid="859d30f9-d17c-43ca-afc6-aac09f431434"/>
+				<textFieldExpression><![CDATA["Y".equals(  $P{ownerClaim1} ) ? "\u2611" : "\u2610"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement key="" style="Checkbox" x="65" y="479" width="30" height="14" uuid="8c25dd35-95c7-4e88-a308-6ba0193b807f"/>
+				<textFieldExpression><![CDATA["Y".equals(  $P{ownerClaim2} ) ? "\u2611" : "\u2610"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="TextDetail" x="80" y="456" width="201" height="24" uuid="0886bcdf-2c1f-4932-91df-b81d3f063c69"/>
+				<textFieldExpression><![CDATA["ไม่มีสิทธิได้รับค่ารักษาพยาบาลจากหน่วยงานอื่น"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="TextDetail" x="80" y="476" width="157" height="24" uuid="610d070a-70e7-4580-b893-5f90b3d7ed6a"/>
+				<textFieldExpression><![CDATA["มีสิทธิได้รับค่ารักษาพยาบาลจากหน่วยงานอื่นแต่เลือกใช้สิทธิจากทางราชการ"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement key="" style="Checkbox" x="65" y="499" width="30" height="14" uuid="4b9e7a43-968b-4fa2-b350-2a1cbce1eee9"/>
+				<textFieldExpression><![CDATA["Y".equals(  $P{ownerClaim3} ) ? "\u2611" : "\u2610"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement key="" style="Checkbox" x="65" y="519" width="30" height="14" uuid="3ed1e93c-5541-40c5-94cc-facb02a7fa90"/>
+				<textFieldExpression><![CDATA["Y".equals(  $P{ownerClaim4} ) ? "\u2611" : "\u2610"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="TextDetail" x="80" y="496" width="201" height="24" uuid="bb37453a-4788-4a3a-b0a7-5dfe23de15e7"/>
+				<textFieldExpression><![CDATA["มีสิทธิได้รับค่ารักษาพยาบาลตามสัญญาประกันภัย"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="TextDetail" x="80" y="516" width="157" height="24" uuid="7b6fa89b-36fd-4aa8-9256-fb48c9f99763"/>
+				<textFieldExpression><![CDATA["เป็นผู้ใช้สิทธิเบิกค่ารักษาพยาบาลสำหรับบุตรแต่เพียงฝ่ายเดียว"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="TextDetail" x="0" y="537" width="50" height="24" uuid="eaf268f5-27d1-4b8e-b9de-ae885db1004e"/>
+				<textFieldExpression><![CDATA["(2) ข้าพเจ้า"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement key="" style="Checkbox" x="65" y="563" width="30" height="14" uuid="172c8cec-de58-4133-9120-d03889d8cca0"/>
+				<textFieldExpression><![CDATA["Y".equals(  $P{otherClaim1} ) ? "\u2611" : "\u2610"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement key="" style="Checkbox" x="65" y="583" width="30" height="14" uuid="d3f1aeeb-72af-4caa-98a4-474ab6f0c1ad"/>
+				<textFieldExpression><![CDATA["Y".equals(  $P{otherClaim2} ) ? "\u2611" : "\u2610"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="TextDetail" x="80" y="560" width="201" height="24" uuid="bda932f1-14fb-4481-a868-04b8a41f70cf"/>
+				<textFieldExpression><![CDATA["ไม่มีสิทธิได้รับค่ารักษาพยาบาลจากหน่วยงานอื่น"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="TextDetail" x="80" y="580" width="340" height="24" uuid="79f87bff-86dd-4128-9f9d-84247649d539"/>
+				<textFieldExpression><![CDATA["มีสิทธิได้รับค่ารักษาพยาบาลจากหน่วยงานอื่น แต่ค่ารักษาพยาบาลที่ได้รับต่ำกว่า"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement key="" style="Checkbox" x="65" y="618" width="30" height="14" uuid="055ccaab-1382-4ec1-83f5-35a0d5b5baa3"/>
+				<textFieldExpression><![CDATA["Y".equals(  $P{otherClaim3} ) ? "\u2611" : "\u2610"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement key="" style="Checkbox" x="65" y="638" width="30" height="14" uuid="861d73e7-8712-47ab-8170-1fae911ca24e"/>
+				<textFieldExpression><![CDATA["Y".equals(  $P{otherClaim4} ) ? "\u2611" : "\u2610"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="TextDetail" x="80" y="615" width="190" height="24" uuid="43c81946-9f85-4bcb-89ac-8c5b210afbcb"/>
+				<textFieldExpression><![CDATA["มีสิทธิได้รับค่ารักษาพยาบาลตามสัญญาประกันภัย"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="TextDetail" x="80" y="635" width="157" height="24" uuid="72e61c19-0f96-49a4-8add-de762e685d5b"/>
+				<textFieldExpression><![CDATA["มีสิทธิได้รับค่ารักษาพยาบาลจากหน่วยงานอื่นในฐานะเป็นผู้อาศัยสิทธิของผู้อื่น"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="TextDetail" x="81" y="597" width="195" height="24" uuid="63c20c6e-84f7-42c7-b40b-83596f7f955a"/>
+				<textFieldExpression><![CDATA["สิทธิตามพระราชกฤษฎีกาฯ"]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement style="TextDetail" x="80" y="41" width="196" height="20" uuid="5624a171-a3fe-4b60-8a1e-1442d5429de4"/>
+				<textFieldExpression><![CDATA[$P{coupleName}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement style="TextDetail" x="80" y="61" width="196" height="20" uuid="8ff30e1e-dbeb-46b8-b4d0-1fd12d655e12"/>
+				<textFieldExpression><![CDATA[$P{fatherName}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement style="TextDetail" x="80" y="81" width="196" height="20" uuid="a3338b05-e8d0-48d4-9f8c-7c1d4e5dfa97"/>
+				<textFieldExpression><![CDATA[$P{motherName}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement style="TextDetail" x="80" y="101" width="196" height="20" uuid="740eee13-d842-4f10-8410-2a9ee2c576e5"/>
+				<textFieldExpression><![CDATA[$P{child1Name}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement style="TextDetail" x="80" y="158" width="196" height="20" uuid="903dc08c-a1ef-4fdc-9ebb-2ebea5abeec7"/>
+				<textFieldExpression><![CDATA[$P{child2Name}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement style="TextDetail" x="80" y="215" width="196" height="20" uuid="351b9313-78d1-4fd6-a41c-fe8a49048922"/>
+				<textFieldExpression><![CDATA[$P{child3Name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="TextDetailCenter" x="350" y="235" width="36" height="20" uuid="bd3ae8a2-a044-4133-8079-0349867bee8f"/>
+				<textFieldExpression><![CDATA[$P{child3Order}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="TextDetailCenter" x="350" y="178" width="36" height="20" uuid="f568be33-14f7-40e5-93d6-7b2e5f762954"/>
+				<textFieldExpression><![CDATA[$P{child2Order}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="TextDetailCenter" x="350" y="121" width="36" height="20" uuid="4b261ecc-1b7b-4572-827b-59cdc32e7fe2"/>
+				<textFieldExpression><![CDATA[$P{child1Order}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement style="TextDetailCenter" x="95" y="121" width="180" height="20" uuid="77ab1734-24c0-48c1-8fe4-2496ce802018"/>
+				<textFieldExpression><![CDATA[$P{birthdate1}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement style="TextDetailCenter" x="95" y="177" width="180" height="20" uuid="cdb228cb-6292-470e-a9b0-d2db451eedc2"/>
+				<textFieldExpression><![CDATA[$P{birthdate2}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement style="TextDetailCenter" x="95" y="235" width="180" height="20" uuid="6ba5a1f8-2c50-4303-8d34-f464ecdcacba"/>
+				<textFieldExpression><![CDATA[$P{birthdate3}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="TextDetailCenter" x="371" y="215" width="89" height="20" uuid="94604030-8d1e-4c34-8308-61c69f73006b"/>
+				<textFieldExpression><![CDATA[$P{child3CitizenId}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="TextDetailCenter" x="371" y="158" width="89" height="20" uuid="fae1dde2-799f-4347-a025-6d80e6069444"/>
+				<textFieldExpression><![CDATA[$P{child2CitizenId}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="TextDetailCenter" x="371" y="101" width="89" height="20" uuid="5f31052b-35a1-471b-9d16-834e5d68601b"/>
+				<textFieldExpression><![CDATA[$P{child1CitizenId}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="TextDetailCenter" x="371" y="81" width="89" height="20" uuid="a15dfe02-1fad-457f-8d9a-581d66f0130f"/>
+				<textFieldExpression><![CDATA[$P{motherCitizenId}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="TextDetailCenter" x="371" y="61" width="89" height="20" uuid="c5570e8f-69ea-469a-a7d2-24bd1f727404"/>
+				<textFieldExpression><![CDATA[$P{fatherCitizenId}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="TextDetailCenter" x="371" y="41" width="89" height="20" uuid="bb9bfa52-5f0c-472a-a7f0-79ee4a273411"/>
+				<textFieldExpression><![CDATA[$P{coupleCitizenId}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="TextDetail" x="41" y="273" width="418" height="20" uuid="b3ed9117-f7c7-41f7-9c0e-b4eb1fcdf0e4"/>
+				<textFieldExpression><![CDATA[$P{disease}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="TextDetail" x="218" y="292" width="242" height="20" uuid="05485cec-4a9c-410c-86c8-a3d1022138b6"/>
+				<textFieldExpression><![CDATA[$P{hospitalName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement key="" style="TextDetailCenter" x="271" y="310" width="154" height="20" uuid="0ffed39d-a2bf-40a9-bba4-42a5ad747a81"/>
+				<textFieldExpression><![CDATA[$P{treatedDateFrom}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement key="" style="TextDetailCenter" x="-6" y="332" width="154" height="20" uuid="569ba146-4d6a-4b5c-955a-996e4dab720c"/>
+				<textFieldExpression><![CDATA[$P{treatedDateTo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement key="" style="TextDetailCenter" x="204" y="332" width="230" height="20" uuid="59491a99-a686-49b2-a863-14c57c06d12a"/>
+				<textFieldExpression><![CDATA[$P{totalMoney}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement key="" style="TextDetailCenter" x="-1" y="350" width="250" height="20" uuid="18e6e5a6-9367-4e5d-a019-b0883fc4ff1c"/>
+				<textFieldExpression><![CDATA[$P{totalMoneyText}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement key="" style="TextDetailCenter" x="383" y="350" width="50" height="20" uuid="5e762b80-dd88-4349-a719-00a90cc8bdb4"/>
+				<textFieldExpression><![CDATA[$P{ReceiptQt}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement key="" style="TextDetailCenter" x="24" y="437" width="98" height="20" uuid="f6e8951d-9e79-4715-8fdd-280cc00d4c4d"/>
+				<textFieldExpression><![CDATA[$P{claimMoney}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement key="" style="TextDetailCenter" x="153" y="437" width="272" height="20" uuid="6db1b147-7e3b-4714-ab52-fd9c82de3860"/>
+				<textFieldExpression><![CDATA[$P{claimMoneyText}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+</jasperReport>
