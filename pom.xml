@@ -27,7 +27,7 @@
 		<!-- Dependency Version -->
 		<commons.lang3.version>3.6</commons.lang3.version>
 		<commons.fileupload.version>1.3.3</commons.fileupload.version>
-		<commons.io.version>2.5</commons.io.version>
+		<commons.io.version>2.7</commons.io.version>
 		<commons-math3.version>3.6.1</commons-math3.version>
 		<thymeleaf.version>3.0.9.RELEASE</thymeleaf.version>
 		<thymeleaf-extras-springsecurity5.version>3.0.4.RELEASE</thymeleaf-extras-springsecurity5.version>
