@@ -37,7 +37,7 @@
 		<quartz.version>2.2.1</quartz.version>
 		<jasperreports.version>6.5.1</jasperreports.version>
 		<itext.version>2.1.7</itext.version>
-		<apache-poi.version>3.17</apache-poi.version>
+		<apache-poi.version>4.1.1</apache-poi.version>
 		<apache.cxf.version>3.2.1</apache.cxf.version>
 		<okhttp.version>3.13.1</okhttp.version>
 		<!-- Plugin Version -->
